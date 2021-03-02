@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+    <style>
+        /* required snapPuzzle styles */
+        .snappuzzle-wrap { position: relative; display: block; }
+        .snappuzzle-pile { position: relative; }
+        .snappuzzle-piece { cursor: move; }
+        .snappuzzle-slot { position: absolute; background: #fff; opacity: .8; }
+        .snappuzzle-slot-hover { background: #eee; }
+        #puzzle-source_image{
+            max-width:100%;
+            height:auto;
+            display:block;
+        }
+        .puzzle-meia-tela{
+            display:inline-block;
+            zoom:1;
+            letter-spacing:normal;
+            word-spacing:normal;
+            vertical-align:top;
+            text-rendering:auto;
+            width:50%;
+        }
+        .puzzle-linha{
+            letter-spacing:-.31em;
+            *letter-spacing:normal;
+            *word-spacing:-.43em;
+            text-rendering:optimizespeed;
+            font-family:FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
+            display:-webkit-flex;
+            -webkit-flex-flow:row wrap;
+            display:-ms-flexbox;
+            -ms-flex-flow:row wrap;
+            -ms-align-content:flex-start;
+            -webkit-align-content:flex-start;
+            align-content:flex-start;
+            max-width:1280px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="puzzle-containment">
+        <div class="puzzle-linha">
+            <div class="puzzle-meia-tela">
+                <div style="margin:10px">
+                    <img id="puzzle-source_image"  src="image.jpg">
+                </div>
+            </div>
+            <div  class="puzzle-meia-tela">
+                <div id="pile" style="margin:10px"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="jquery.snap-puzzle.js"></script>
+    <script>
+        // jQuery UI Touch Punch 0.2.3 - must load after jQuery UI
+        // enables touch support for jQuery UI
+        !function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
+
+        $(function(){
+            $('#pile').height($('#puzzle-source_image').height());            
+            $('#puzzle_solved').hide();
+            $('#puzzle-source_image').snapPuzzle({
+                rows: 7, columns: 2,
+                pile: '#pile',
+                containment: '#puzzle-containment',
+                onComplete: function(){
+                    $('#puzzle-source_image').fadeOut(200).fadeIn();
+                }
+            });
+
+            $(window).resize(function(){
+                $('#pile').height($('#puzzle-source_image').height());
+                $('#puzzle-source_image').snapPuzzle('refresh');
+            });
+        });
+    </script>
+</body>
+</html>

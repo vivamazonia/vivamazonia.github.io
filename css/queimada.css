@@ -1,0 +1,30 @@
+.local-queimada{
+    border: 1px solid black;
+    width: 8.54%;
+    height: 95px;
+}
+.linha-queimada{
+    letter-spacing:-.31em;
+    *letter-spacing:normal;
+    *word-spacing:-.43em;
+    text-rendering:optimizespeed;
+    font-family:FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
+    display:-webkit-flex;
+    -webkit-flex-flow:row wrap;
+    display:-ms-flexbox;
+    -ms-flex-flow:row wrap;
+    -ms-align-content:flex-start;
+    -webkit-align-content:flex-start;
+    align-content:flex-start;
+    max-width:1280px;
+    margin:auto;
+}
+.floresta-fogo-queimada{
+    background-color: red;
+}
+.floresta-verde-queimada{
+    background-color: green;
+}
+#queimadas{
+    margin-left: 155px;
+}

@@ -1,0 +1,112 @@
+<html>
+    <style>
+        *{
+            background: black;
+        }
+        #main_div{
+            width: auto;
+            height: 100%;
+            left:15%;
+        }
+        .local{
+            border: 1px solid black;
+            width: 9.5%;
+            height: 100px;
+        }
+        .linha{
+            letter-spacing:-.31em;
+            *letter-spacing:normal;
+            *word-spacing:-.43em;
+            text-rendering:optimizespeed;
+            font-family:FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
+            display:-webkit-flex;
+            -webkit-flex-flow:row wrap;
+            display:-ms-flexbox;
+            -ms-flex-flow:row wrap;
+            -ms-align-content:flex-start;
+            -webkit-align-content:flex-start;
+            align-content:flex-start;
+            max-width:1280px;
+            margin:auto;
+        }
+        .floresta-fogo{
+            background-color: red;
+        }
+        .floresta-verde{
+            background-color: green;
+
+        }
+    </style>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/locais.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="main_div" class="principal">
+        </div>
+    </body>
+    <script>
+        $(".local").addClass('floresta-verde');
+        for(var i = 0; i < 5;i++)
+        pintarAleatorio(true);
+        var intervalID = window.setInterval(pintarAleatorio, 2000, false);
+
+
+        $(".local").click(function(){
+            let vermelho = $(this).hasClass("floresta-fogo");
+            if(vermelho){
+                $(this).removeClass('floresta-fogo');
+                $(this).addClass('floresta-verde');
+            }
+        });
+
+        function temVerde(){
+            for(let i = 1; i <=6; i++){
+                for(let j = 1; j <= 10; j++){
+                    if($(".linha"+i+" .local:nth-child("+j+")").hasClass('floresta-verde') == true){
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        function temVermelho(){
+            for(let i = 1; i <=6; i++){
+                for(let j = 1; j <= 10; j++){
+                    if($(".linha"+i+" .local:nth-child("+j+")").hasClass('floresta-fogo') == true){
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        function pintarAleatorio(inicio){
+            console.log(temVerde());
+            console.log(temVermelho());
+            if(!inicio && !temVermelho()){
+                clearInterval(intervalID);
+                alert("Você ganhou!");
+            }else{
+                let vermelho = false;
+                do{
+                    let linha = Math.floor(Math.random() * Math.floor(6))+1;
+                    let coluna = Math.floor(Math.random() * Math.floor(10))+1;
+                    let cor = $(".linha"+linha+" .local:nth-child("+coluna+")").css('background-color');
+                    //alert(linha+'-'+coluna);
+                    if($(".linha"+linha+" .local:nth-child("+coluna+")").hasClass('floresta-verde')){
+                        $(".linha"+linha+" .local:nth-child("+coluna+")").removeClass('floresta-verde');
+                        $(".linha"+linha+" .local:nth-child("+coluna+")").addClass('floresta-fogo');
+                        vermelho = false;
+                    }else if(temVerde()){
+                        vermelho = true;
+                    }else{
+                        alert("Você perdeu!");
+                        clearInterval(intervalID);
+                        vermelho = false;
+                    }
+                }while(vermelho);
+
+            }
+        }
+    </script>
+</html>

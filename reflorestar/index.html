@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <style>
+        #ferramentas_desmatamento{
+            margin-top: 300px;
+            display: flex;
+            text-align: center;
+            margin-left: 400px;
+        }
+        #ferramentas_desmatamento > div{
+            width: 100px;
+            height: 100px;
+            margin-left: 20px;
+        }
+        .happy{background-color: green;}
+        .sad{background-color: gray;}
+        .meh{background-color: brown;}
+        .heart{background-color: lightskyblue;}
+        .end{background-color: transparent;}
+        #machado_desmatamento{
+            background-color: green;
+            cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;        
+        }
+        #pá_desmatamento{
+            background-color: gray;
+            cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png"), auto;        
+        }
+        #enxada_desmatamento{
+            background-color: brown;
+            cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/meh.png"), auto;        
+        }
+        #regador_desmatamento{
+            background-color: lightskyblue;
+            cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto;        
+        }
+        .planta_desmatamento{
+            width: 200px;
+            height: 200px;
+            margin-top: 100px;
+            margin-left: 20px;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+    <div>
+        <div style="display: flex;">
+            <div class="planta_desmatamento happy"></div>
+            <div class="planta_desmatamento happy"></div>
+            <div class="planta_desmatamento happy"></div>
+            <div class="planta_desmatamento happy"></div>
+            <div class="planta_desmatamento happy"></div>
+            <div class="planta_desmatamento happy"></div>
+        </div>
+        <div id="ferramentas_desmatamento">
+            <div id="machado_desmatamento" onclick="mudar('happy')"></div>
+            <div id="pá_desmatamento" onclick="mudar('sad')"></div>
+            <div id="enxada_desmatamento" onclick="mudar('meh')"></div>
+            <div id="regador_desmatamento" onclick="mudar('heart')"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var atual = 'none';
+        var fase_planta_desmatamento = 'happy';
+        function mudar(tipo){
+            atual = tipo;
+            $('html').css("cursor",'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/'+tipo+'.png"), auto');
+        }
+        $(".planta_desmatamento").click(function(){
+            console.log($(this).attr('class'));
+            if($(this).hasClass(atual)){
+                $(this).removeClass(atual);
+                if(atual == 'happy'){
+                    $(this).addClass('sad');
+                }else if(atual == 'sad'){
+                    $(this).addClass('meh');
+                }else if(atual == 'meh'){
+                    $(this).addClass('heart');
+                }if(atual == 'heart'){
+                    $(this).addClass('end');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

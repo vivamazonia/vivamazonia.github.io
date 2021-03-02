@@ -1,0 +1,53 @@
+function esconderTudo(){
+    $("#floresta").hide();    
+    sairQueimadas();
+    sairDesmatamento();
+    $("#animais").hide();
+    $("#reflorestamento").hide();
+    $("#lago").hide();
+    $("#greenpeace").hide();
+    $("#main_div").removeClass("principal");
+    $("#voltar").show();
+}
+function mostrarTudo(){
+    $("#floresta").show();
+    sairQueimadas();
+    sairDesmatamento();
+    $("#animais").show();
+    $("#reflorestamento").show();
+    $("#lago").show();
+    $("#greenpeace").show();
+    $("#main_div").addClass("principal");
+    $("#main_div").removeClass("floresta");
+    $("#main_div").removeClass("animais");
+    $("#main_div").removeClass("reflorestamento");
+    $("#main_div").removeClass("lago");
+    $("#main_div").removeClass("greenpeace");
+    $("#voltar").hide();
+}
+$("#voltar").hide();
+$("#floresta").click(function(){
+    $("#main_div").addClass("queimada");
+    esconderTudo();
+    inicarQueimadas();
+});
+$("#animais").click(function(){
+    $("#main_div").addClass("animais");
+    esconderTudo();
+});
+$("#reflorestamento").click(function(){
+    $("#main_div").addClass("reflorestamento");
+    esconderTudo();
+    $("#desmatamento").show();
+});
+$("#lago").click(function(){
+    $("#main_div").addClass("lago");
+    esconderTudo();
+});
+$("#greenpeace").click(function(){
+    $("#main_div").addClass("greenpeace");
+    esconderTudo();
+});
+$("#voltar").click(function(){
+    mostrarTudo();
+});

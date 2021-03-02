@@ -1,0 +1,40 @@
+#ferramentas_desmatamento{
+    margin-top: 200px;
+    display: flex;
+    text-align: center;
+    margin-left: 400px;
+}
+#ferramentas_desmatamento > div{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+.happy{background-color: green;}
+.sad{background-color: gray;}
+.meh{background-color: brown;}
+.heart{background-color: lightskyblue;}
+.end{background-color: transparent;}
+#machado_desmatamento{
+    background-color: green;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;        
+}
+#pá_desmatamento{
+    background-color: gray;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png"), auto;        
+}
+#enxada_desmatamento{
+    background-color: brown;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/meh.png"), auto;        
+}
+#regador_desmatamento{
+    background-color: lightskyblue;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto;        
+}
+.planta_desmatamento{
+    width: 130px;
+    height: 130px;
+    margin-left: 30px;
+}
+.planta_desmatamento:first-child{
+    margin-left: 200px;
+}

@@ -1,0 +1,95 @@
+#voltar{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 81.5%;
+    top: 3%;
+    background: black;
+    opacity: 30%;
+}
+#floresta{
+    width: 270px;
+    height: 250px;
+    position: absolute;
+    left: 12%;
+    background: red;
+    opacity: 30%;
+}
+#animais{
+    width: 170px;
+    height: 150px;
+    position: absolute;
+    left: 20.5%;
+    top:63%;
+    background: orangered;
+    opacity: 30%;
+}
+#reflorestamento{
+    width: 230px;
+    height: 180px;
+    position: absolute;
+    left: 40.5%;
+    top:69%;
+    background: greenyellow;
+    opacity: 30%;
+}
+#lago{
+    width: 305px;
+    height: 275px;
+    position: absolute;
+    left: 65.5%;
+    top:54%;
+    background: blue;
+    opacity: 30%;
+}
+#greenpeace{
+    width: 270px;
+    height: 265px;
+    position: absolute;
+    left: 39.5%;
+    top: 22%;
+    background: green;
+    opacity: 30%;
+}
+.principal{
+    background-position-x: center;
+    background-size: 77%;
+    background-repeat: no-repeat;
+    background-image: url("../images/main.jpeg") !important;
+}
+.animais{
+    background-position-x: center;
+    background-size: 77%;
+    background-repeat: no-repeat;
+    background: orangered
+    ;
+}
+.reflorestamento{
+    background-position-x: center;
+    background-size: 77%;
+    background-repeat: no-repeat;
+    background-image: url("../images/main.jpeg") !important;
+}
+.queimada{
+    background-position-x: center;
+    background-size: 77%;
+    background-repeat: no-repeat;
+    background-image: url("../images/main.jpeg") !important;
+}
+.lago{
+    background-position-x: center;
+    background-size: 77%;
+    background-repeat: no-repeat;
+    background: blue;
+}
+.greenpeace{
+    background-position-x: center;
+    background-size: 77%;
+    background-repeat: no-repeat;
+    background: green;
+}
+
+#queimadas, #desmatamento{
+    display: none;
+    background-color: transparent;
+}
