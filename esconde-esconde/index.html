@@ -3,146 +3,18 @@
         html{
             background: black;
         }
-        #escondido{
-            height: 100%;
-            width: 50%;
-            background: red;
-            position: absolute;
-            right: 50%;
-        }
-        #salvando{
-            height: 100%;
-            width: 50%;
-            background: blue;
-            position: absolute;
-            left: 50%;
-        }
-        #guarda{
-            height: 10%;
-            width: 5%;
-            background: green;
-            position: absolute;
-            left: 87.5%;
-        }
-        #porcentagem{
-            width: 200px;
-            height: 200px;
-            background: white;
-            position: absolute;
-            top: 87.5%;
-        }
-        #jaula{
-            width: 400px;
-            height: 400px;
-            background: gray;
-            position: absolute;
-            top: 20%;
-            left: 55%;
-            font-size: 30px;
-            color: red;
-        }
     </style>
     <head>
+        <link rel="stylesheet" type="text/css" href="../css/trafico_animais.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <div id="main_div">
-            <div id="nivel0">
-                
-            </div>
-            <div id="nivel1">
-                <div id="escondido"></div>
-                <div id="salvando"></div>
-                <div id="guarda"></div>
-                <div id="jaula"></div>
-            </div>
+                <div id="trafico_animais_escondido"></div>
+                <div id="trafico_animais_salvando"></div>
+                <div id="trafico_animais_guarda"></div>
+                <div id="trafico_animais_jaula"></div>
         </div>
     </body>
-    <script>
-        var nivel = 2;
-        var tempoGuarda;
-        var tempoEsperaGuarda;
-        var tempoInicioGuarda;
-        var velocidadeSalva;
-        tempoInicioGuarda = 2000;
-        if(nivel == 1){
-            tempoGuarda = 2000;
-            tempoEsperaGuarda = 10000;
-            velocidadeSalva = 7;
-        }else if(nivel == 2){
-            tempoGuarda = 1700;
-            tempoEsperaGuarda = 8000;
-            velocidadeSalva = 12;
-        }else if(nivel == 3){
-            tempoGuarda = 1300;
-            tempoEsperaGuarda = 5000;
-            velocidadeSalva = 15;
-        }
-        var aaa;
-        var olhando = false;
-        var andando = false;
-        var currentMousePos = { x: -1, y: -1 };
-        var myVar;
-        async function sleep(time) {
-            await new Promise(resolve => setTimeout(resolve, time))
-        }
-        jogando = false;
-        carrega = 0;
-        salvo = false;
-        a = 0;
-        async function guarda() {
-            await sleep(tempoInicioGuarda);
-            while(!salvo){
-                guardaAnda();
-                await sleep(tempoEsperaGuarda)
-            }
-        }
-        function dentro(){
-            return (currentMousePos.x >= 730 && currentMousePos.x <= 1130 && currentMousePos.y >= 120 && currentMousePos.y <= 520);
-        }
-        async function trabalhando() {
-            jogando = true;
-            while(dentro() && Math.floor(carrega/10) < 100){
-                carrega++;
-                $("#jaula").html(Math.floor(carrega/10)+'%');
-                await sleep(velocidadeSalva)
-            }
-            jogando = false;
-            if(carrega == 1000 && !salvo){
-                alert('salvo!');
-                guardaVolta();
-                aaa.stop();
-                salvo = true;
-            }
-        }
-        guarda();
-        jQuery(function($) {
-            $(document).mousemove(function(event) {
-                currentMousePos.x = event.pageX;
-                currentMousePos.y = event.pageY;
-                if(!jogando)
-                    trabalhando();
-            });
-        });
-
-        async function procura(){
-            var carregando = 0;
-            while(carregando++ < 10){
-                if(currentMousePos.x >= 650){
-                    alert('encontrado');
-                }
-                await sleep(tempoGuarda/10)
-            }
-            guardaVolta();
-        }
-
-        function guardaVolta(){
-            aaa = $("#guarda").animate({height: '10%'}, tempoGuarda, function(){andando = false});
-        }
-
-        function guardaAnda(){
-            andando = true;
-            $("#guarda").animate({height: '70%'}, tempoGuarda, procura);
-        }
-    </script>
+    <script src="../js/trafico_animais.js"></script>
 </html>

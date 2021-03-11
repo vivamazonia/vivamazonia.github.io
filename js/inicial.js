@@ -12,6 +12,7 @@ function sairJogos(){
     sairQueimadas();
     sairDesmatamento();
     sairSujeita();
+    sairTraficoAnimais();
 }
 function mostrarTudo(){
     $("#floresta").show();
@@ -43,6 +44,7 @@ $("#lago").click(function(){
 $("#animais").click(function(){
     $("#main_div").addClass("animais");
     esconderTudo();
+    iniciarTraficoAnimais();
 });
 $("#reflorestamento").click(function(){
     $("#main_div").addClass("reflorestamento");

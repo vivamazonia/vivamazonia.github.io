@@ -1,0 +1,45 @@
+#trafico_animais_escondido{
+    height: 58%;
+    width: 30%;
+    background: red;
+    position: absolute;
+    left: 11.9%;
+}
+#trafico_animais_salvando{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 40%;
+}
+#trafico_animais_guarda{
+    height: 10%;
+    width: 5%;
+    background: green;
+    position: absolute;
+    left: 77.5%;
+}
+#trafico_animais_porcentagem{
+    width: 200px;
+    height: 200px;
+    background: white;
+    position: absolute;
+    top: 87.5%;
+}
+#trafico_animais_jaula{
+    width: 350px;
+    height: 350px;
+    background: gray;
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    font-size: 30px;
+    color: red;
+}
+#trafico_animais_inicio_jaula, #trafico_animais_fim_jaula, #trafico_animais_inicio_salvando, #trafico_animais_fim_salvando{
+    width: 1px;
+    height: 1px;
+}
+#trafico_animais_fim_jaula, #trafico_animais_fim_salvando{
+    float: right;
+    margin-top: 88%;
+}

@@ -3,7 +3,7 @@ var timeouts = [];
 var itens = [];
 function iniciarSujeira(){
     $("#sujeira").show();
-    for(var i = 0; i < 3; i++){
+    for(var i = 0; i < 15; i++){
         timeouts[i] = setTimeout(function (){criarItem(Math.floor(Math.random() * 3)+1) },2000*i);
     }
 }

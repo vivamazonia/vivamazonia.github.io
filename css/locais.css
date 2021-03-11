@@ -61,8 +61,7 @@
     background-position-x: center;
     background-size: 77%;
     background-repeat: no-repeat;
-    background: orangered
-    ;
+    background-image: url("../images/main.jpeg") !important;
 }
 .reflorestamento{
     background-position-x: center;
@@ -89,7 +88,7 @@
     background: green;
 }
 
-#queimadas, #desmatamento, #sujeira{
+#queimadas, #desmatamento, #sujeira, #trafico_animais{
     display: none;
     background-color: transparent;
 }
