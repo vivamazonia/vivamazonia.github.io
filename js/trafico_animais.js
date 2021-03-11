@@ -48,7 +48,8 @@ function iniciarTraficoAnimais(){
 function sairTraficoAnimais(){
     $("#trafico_animais").hide();
     jogo_trafico = false;
-    animacao_guarda.stop();
+    if(animacao_guarda != undefined)
+        animacao_guarda.stop();
 }
 async function guarda() {
     await sleep(tempoInicioGuarda);
