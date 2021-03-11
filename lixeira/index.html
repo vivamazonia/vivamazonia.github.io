@@ -3,59 +3,18 @@
         html{
             background: black;
         }
-        #esteira1, #esteira2, #esteira3{
-            position:absolute;
-            display: flex;
-            top: 0;
-            background: blue;
-            width: 100%;
-            height: 100px;
-            margin: 0;
-            padding: 0;
-            left: 0;
-        }
-        #esteira2{
-            top: 110;
-        }
-        #esteira3{
-            top: 220;
-        }
-        .item{
-            width: 100px;
-            height: 100px;
-            position: absolute;
-        }
-        #lixeiras{
-            margin-top: 360px;
-            display: flex;
-            padding-left: 30%;
-        }
-        #lixeiras > div{
-            width: 150px;
-            height: 150px;
-        }
-        .happy{
-            background: red;
-        }
-        .sad{
-            background: orangered;
-        }
-        .heart{
-            background: green;
-        }
-        .meh{
-            background: yellow;
-        }
+        
     </style>
     <head>
+        <link rel="stylesheet" type="text/css" href="../css/sujeira.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <div id="main_div">
-            <div id="esteira1"></div>
-            <div id="esteira2"></div>
-            <div id="esteira3"></div>
-            <div id="lixeiras">
+            <div id="sujeira_esteira1"></div>
+            <div id="sujeira_esteira2"></div>
+            <div id="sujeira_esteira3"></div>
+            <div id="sujeira_lixeiras">
                 <div class="happy" onclick="jogarLixo('happy')"></div>
                 <div class="sad" onclick="jogarLixo('sad')"></div>
                 <div class="meh" onclick="jogarLixo('meh')"></div>
@@ -63,76 +22,6 @@
             </div>
         </div>
     </body>
-    <script>
-        var lixoAtual = null;
-        var animacao;
-        function jogarLixo(lixeira){
-            if(lixoAtual != null){
-                if($("html").css('cursor').includes(lixeira)){
-                    $(lixoAtual).remove();
-                    lixoAtual = null;
-                    $('html').css("cursor",'default');
-                }else{
-                    //alert('errou tenta denovo');
-                }
-            }
-        }
-        function subtrairPx(v1, v2){
-            v1 = parseInt(v1.split('px')[0]);
-            v2 = parseInt(v2.split('px')[0]);
-            return v1-v2+'px';
-        }
-        for(var i = 0; i < 15; i++){
-            setTimeout(function (){criarItem(Math.floor(Math.random() * 3)+1) },2000*i);
-        }
-        function criarItem(esteira){
-            console.log('add'+esteira);
-            var item = document.createElement('div');
-            var tipo = Math.floor(Math.random() * 4); 
-            console.log(tipo);
-            var lixeira = '';
-            switch(tipo){
-                case 0:
-                    lixeira = 'happy';
-                break;
-                case 1:
-                    lixeira = 'sad';
-                break;
-                case 2:
-                    lixeira = 'meh';
-                break;
-                case 3:
-                    lixeira = 'heart';
-                break;
-            }
-            item.className = "item "+lixeira;
-            $(item).click(function(){
-                if(lixoAtual == null){
-                    $(this).hide();
-                    item.animacao.stop();
-                    lixoAtual = item;
-                    switch(item.className){
-                        case 'item happy':
-                            $('html').css("cursor",'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto');
-                        break;
-                        case 'item sad':
-                            $('html').css("cursor",'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png"), auto');
-                        break;
-                        case 'item meh':
-                            $('html').css("cursor",'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/meh.png"), auto');
-                        break;
-                        case 'item heart':
-                            $('html').css("cursor",'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto');
-                        break;
-                    }
-                    
-                }
-            });
-            $("#esteira"+esteira).append(item);
-            item.animacao = $(item).animate(
-            {
-                left: subtrairPx($("#esteira"+esteira).css('width'),$(item).css('width'))
-            },15000,function(){if(lixoAtual != item ){ (this).remove(); console.log('errou');}});
-        }
+    <script src="../js/sujeira.js">
     </script>
 </html>

@@ -1,13 +1,17 @@
 function esconderTudo(){
-    $("#floresta").hide();    
-    sairQueimadas();
-    sairDesmatamento();
+    $("#floresta").hide();   
     $("#animais").hide();
     $("#reflorestamento").hide();
     $("#lago").hide();
     $("#greenpeace").hide();
     $("#main_div").removeClass("principal");
     $("#voltar").show();
+}
+
+function sairJogos(){
+    sairQueimadas();
+    sairDesmatamento();
+    sairSujeita();
 }
 function mostrarTudo(){
     $("#floresta").show();
@@ -31,6 +35,11 @@ $("#floresta").click(function(){
     esconderTudo();
     inicarQueimadas();
 });
+$("#lago").click(function(){
+    esconderTudo();
+    $("#main_div").addClass("sujeira");
+    iniciarSujeira();
+});
 $("#animais").click(function(){
     $("#main_div").addClass("animais");
     esconderTudo();
@@ -49,5 +58,7 @@ $("#greenpeace").click(function(){
     esconderTudo();
 });
 $("#voltar").click(function(){
+    sairJogos();
+    esconderTudo();
     mostrarTudo();
 });

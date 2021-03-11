@@ -1,0 +1,44 @@
+#sujeira_esteira1, #sujeira_esteira2, #sujeira_esteira3{
+    position:absolute;
+    display: flex;
+    top: 0;
+    background: blue;
+    width: 76.2%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    left: 11.9%;
+    top: 130;
+}
+#sujeira_esteira2{
+    top: 240;
+}
+#sujeira_esteira3{
+    top: 350;
+}
+.sujeira_item{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+#sujeira_lixeiras{
+    margin-top: 350px;
+    display: flex;
+    padding-left: 30%;
+}
+#sujeira_lixeiras > div{
+    width: 150px;
+    height: 150px;
+}
+.happy{
+    background: red;
+}
+.sad{
+    background: orangered;
+}
+.heart{
+    background: green;
+}
+.meh{
+    background: yellow;
+}

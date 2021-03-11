@@ -80,7 +80,7 @@
     background-position-x: center;
     background-size: 77%;
     background-repeat: no-repeat;
-    background: blue;
+    background-image: url("../images/main.jpeg") !important;
 }
 .greenpeace{
     background-position-x: center;
@@ -89,7 +89,7 @@
     background: green;
 }
 
-#queimadas, #desmatamento{
+#queimadas, #desmatamento, #sujeira{
     display: none;
     background-color: transparent;
 }
