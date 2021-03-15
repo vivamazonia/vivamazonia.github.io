@@ -1,3 +1,4 @@
+@font-face { font-family: Roadbrush; src: url('fonts/KTF-Roadbrush.ttf'); }
 html{
     background: black;
 }
@@ -5,4 +6,35 @@ html{
     width: auto;
     height: 100%;
     left:15%;
+}
+#comunica{
+    display: none;
+}
+#caixa_texto{
+    width: 53.2%;
+    left: 31.9%;
+    top: 69%;
+    background-color: white;
+    border: black solid 1px;
+    position: absolute;
+    font-family: Roadbrush;
+    height: 23%;
+    padding: 20px;
+    font-size: 30px;
+}
+#comunica_personagem{
+    width: 20.2%;
+    left: 11.9%;
+    top: 39%;
+    background-color: blue;
+    position: absolute;
+    height: 60%;
+}
+#proxima_fala_btn{
+    width: 80px;
+    background-color: blueviolet;
+    height: 80px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
 }

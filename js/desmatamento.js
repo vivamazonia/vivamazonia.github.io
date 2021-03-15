@@ -3,6 +3,9 @@ var fase_planta_desmatamento = 'happy';
 function sairDesmatamento(){
     $("#desmatamento").hide();
 }
+function iniciarDesmatamento(){
+    $("#desmatamento").show();
+}
 function mudar(tipo){
     atual = tipo;
     $('html').css("cursor",'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/'+tipo+'.png"), auto');

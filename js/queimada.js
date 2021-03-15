@@ -17,7 +17,7 @@ function derrota_queimada(){
 
 }
 
-function inicarQueimadas(){
+function iniciarQueimadas(){
     $(".local-queimada").addClass('floresta-verde-queimada');
     for(var i = 0; i < 5;i++)
         pintarAleatorio(true);

@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="css/desmatamento.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/locais.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
     </head>
     <body>
         <div id="main_div" class="principal">
@@ -16,6 +16,15 @@
             <div id="lago"></div>
             <div id="greenpeace"></div>
             <div id="voltar"></div>
+            <div id="comunica">
+                <div id="comunica_personagem">
+
+                </div>
+                <div id="caixa_texto" onclick="proxima_fala()">
+                    <div id="texto"></div>
+                    <div id="proxima_fala_btn"></div>
+                </div>
+            </div>
             <br/>
             <br/>
             <br/>
@@ -125,6 +134,7 @@
         </div>
     </body>
     <script src="js/inicial.js"></script>
+    <script src="js/falas.js"></script>
     <script src="js/queimada.js"></script>
     <script src="js/desmatamento.js"></script>
     <script src="js/sujeira.js"></script>
