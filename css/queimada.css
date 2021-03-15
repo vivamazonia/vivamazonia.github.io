@@ -1,5 +1,4 @@
 .local-queimada{
-    border: 1px solid black;
     width: 8.54%;
     height: 95px;
 }
@@ -20,10 +19,10 @@
     margin:auto;
 }
 .floresta-fogo-queimada{
-    background-color: red;
-}
-.floresta-verde-queimada{
-    background-color: green;
+    background-image: url('../assets/queimadas/chama.png');
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position-x: center;
 }
 #queimadas{
     margin-left: 155px;

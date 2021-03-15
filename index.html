@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/trafico_animais.css" />
         <link rel="stylesheet" type="text/css" href="css/queimada.css" />
-        <link rel="stylesheet" type="text/css" href="css/sujeira.css" />
+        <link rel="stylesheet" type="text/css" href="css/poluicao.css" />
         <link rel="stylesheet" type="text/css" href="css/desmatamento.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/locais.css" />
@@ -120,15 +120,14 @@
                     <div id="regador_desmatamento" onclick="mudar('heart')"></div>
                 </div>
             </div>
-            <div id="sujeira">
-                <div id="sujeira_esteira1"></div>
-                <div id="sujeira_esteira2"></div>
-                <div id="sujeira_esteira3"></div>
-                <div id="sujeira_lixeiras">
-                    <div class="happy" onclick="jogarLixo('happy')"></div>
-                    <div class="sad" onclick="jogarLixo('sad')"></div>
-                    <div class="meh" onclick="jogarLixo('meh')"></div>
-                    <div class="heart" onclick="jogarLixo('heart')"></div>
+            <div id="poluicao">
+                <div id="poluicao_esteira1"></div>
+                <div id="poluicao_esteira2"></div>
+                <div id="poluicao_lixeiras">
+                    <div class="plastico" onclick="jogarLixo('plastico')"></div>
+                    <div class="papel" onclick="jogarLixo('papel')"></div>
+                    <div class="metal" onclick="jogarLixo('metal')"></div>
+                    <div class="vidro" onclick="jogarLixo('vidro')"></div>
                 </div>
             </div>
         </div>
@@ -137,6 +136,6 @@
     <script src="js/falas.js"></script>
     <script src="js/queimada.js"></script>
     <script src="js/desmatamento.js"></script>
-    <script src="js/sujeira.js"></script>
+    <script src="js/poluicao.js"></script>
     <script src="js/trafico_animais.js"></script>
 </html>
