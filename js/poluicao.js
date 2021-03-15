@@ -1,14 +1,17 @@
 var lixoAtual = null;
 var timeouts = [];
 var itens = [];
-function iniciarSujeira(){
-    $("#sujeira").show();
-    for(var i = 0; i < 15; i++){
-        timeouts[i] = setTimeout(function (){criarItem(Math.floor(Math.random() * 3)+1) },2000*i);
+function iniciarPoluicao(){
+    $("#poluicao").show();
+    
+    $('html').css("cursor",'url("assets/lixo/rede.png"), auto');
+    console.log($('html').css("cursor"));
+    for(var i = 0; i < 10; i++){
+        timeouts[i] = setTimeout(function (){criarItem(Math.floor(Math.random() * 2)+1) },2000*i);
     }
 }
 function sairSujeita(){
-    $("#sujeira").hide();
+    $("#poluicao").hide();
     for(var i = 0; i < 15; i++){
         clearTimeout(timeouts[i]);
     }
@@ -39,45 +42,45 @@ function criarItem(esteira){
     var lixeira = '';
     switch(tipo){
         case 0:
-            lixeira = 'happy';
+            lixeira = 'plastico';
         break;
         case 1:
-            lixeira = 'sad';
+            lixeira = 'papel';
         break;
         case 2:
-            lixeira = 'meh';
+            lixeira = 'metal';
         break;
         case 3:
-            lixeira = 'heart';
+            lixeira = 'vidro';
         break;
     }
-    item.className = "sujeira_item "+lixeira;
+    item.className = "poluicao_item "+lixeira;
     $(item).click(function(){
         if(lixoAtual == null){
             $(this).hide();
             item.animacao.stop();
             lixoAtual = item;
             switch(item.className){
-                case 'sujeira_item happy':
-                    $('html').css("cursor",'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto');
+                case 'poluicao_item plastico':
+                    $('html').css("cursor",'url("../assets/lixo/plástico.png"), auto');
                 break;
-                case 'sujeira_item sad':
-                    $('html').css("cursor",'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png"), auto');
+                case 'poluicao_item papel':
+                    $('html').css("cursor",'url("../assets/lixo/papel.png"), auto');
                 break;
-                case 'sujeira_item meh':
-                    $('html').css("cursor",'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/meh.png"), auto');
+                case 'poluicao_item metal':
+                    $('html').css("cursor",'url("../assets/lixo/metal.png"), auto');
                 break;
-                case 'sujeira_item heart':
-                    $('html').css("cursor",'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto');
+                case 'poluicao_item vidro':
+                    $('html').css("cursor",'url("../assets/lixo/vidro.png"), auto');
                 break;
             }
             
         }
     });
-    $("#sujeira_esteira"+esteira).append(item);
+    $("#poluicao_esteira"+esteira).append(item);
     item.animacao = $(item).animate(
     {
-        left: subtrairPx($("#sujeira_esteira"+esteira).css('width'),$(item).css('width'))
+        left: subtrairPx($("#poluicao_esteira"+esteira).css('width'),$(item).css('width'))
     },15000,function(){if(lixoAtual != item ){ (this).remove(); console.log('errou');}});
     itens.push(item);
 }

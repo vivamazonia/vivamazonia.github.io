@@ -1,0 +1,62 @@
+#poluicao_esteira1, #poluicao_esteira2, #poluicao_esteira3{
+    position:absolute;
+    display: flex;
+    top: 0;
+    width: 76.2%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    left: 11.9%;
+    top: 260;
+}
+#poluicao_esteira2{
+    top: 360;
+}
+.poluicao_item{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+#poluicao_lixeiras{
+    margin-top: 350px;
+    display: flex;
+    padding-left: 30%;
+}
+#poluicao_lixeiras > div{
+    width: 150px;
+    height: 150px;
+}
+.poluicao_item.plastico{
+    background-image: url("../assets/lixo/plástico.png");
+    background-size: 129%;
+}
+.poluicao_item.papel{
+    background-image: url("../assets/lixo/papel.png");
+    background-size: 116%;
+}
+.poluicao_item.metal{
+    background-image: url("../assets/lixo/metal.png");
+    background-size: 130%;
+}
+.poluicao_item.vidro{
+    background-image: url("../assets/lixo/vidro.png");
+    background-size: 129%;
+}
+#poluicao_lixeiras > div{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+#poluicao_lixeiras > .plastico{
+    background-image: url("../assets/lixeira/plástico.png");
+}
+#poluicao_lixeiras > .metal{
+    background-image: url("../assets/lixeira/metal.png");
+}
+#poluicao_lixeiras > .vidro{
+    background-image: url("../assets/lixeira/vidro.png");
+}
+#poluicao_lixeiras > .papel{
+    background-image: url("../assets/lixeira/papel.png");
+}

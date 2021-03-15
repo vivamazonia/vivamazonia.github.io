@@ -4,7 +4,7 @@
     position: absolute;
     left: 81.5%;
     top: 3%;
-    background: black;
+    background: green;
     opacity: 30%;
 }
 #floresta{
@@ -53,17 +53,18 @@
 }
 .principal{
     background-position-x: center;
+    background-position-y: bottom;
     background-size: 77%;
     background-repeat: no-repeat;
     background-image: url("../images/main.jpeg") !important;
 }
-.animais{
+.trafico{
     background-position-x: center;
     background-size: 77%;
     background-repeat: no-repeat;
     background-image: url("../images/main.jpeg") !important;
 }
-.reflorestamento{
+.desmatamento{
     background-position-x: center;
     background-size: 77%;
     background-repeat: no-repeat;
@@ -73,22 +74,23 @@
     background-position-x: center;
     background-size: 77%;
     background-repeat: no-repeat;
-    background-image: url("../images/main.jpeg") !important;
+    background-position-y: 80px;
+    background-image: url("../assets/tela/queimada.png") !important;
 }
-.lago{
+.poluicao{
     background-position-x: center;
     background-size: 77%;
     background-repeat: no-repeat;
-    background-image: url("../images/main.jpeg") !important;
+    background-image: url("../assets/tela/rio.png") !important;
 }
 .greenpeace{
     background-position-x: center;
     background-size: 77%;
     background-repeat: no-repeat;
-    background: green;
+    background-image: url("../images/main.jpeg") !important;
 }
 
-#queimadas, #desmatamento, #sujeira, #trafico_animais{
+#queimadas, #desmatamento, #poluicao, #trafico_animais{
     display: none;
     background-color: transparent;
 }

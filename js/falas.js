@@ -1,5 +1,5 @@
 var falas = {
-    "home" : [
+    "principal" : [
         "Bem vindo",
         "Ao jogo",
         "VIVAMAZONIA"
@@ -9,10 +9,8 @@ var falas = {
         "Ao jogo",
         "queimada"
     ],
-    "sujeira" : [
-        "Bem vindo",
-        "Ao jogo",
-        "sujeira"
+    "poluicao" : [
+        "Bem vindo"
     ],
     "trafico" : [
         "Bem vindo",
@@ -23,6 +21,11 @@ var falas = {
         "Bem vindo",
         "Ao jogo",
         "desmatamento"
+    ],
+    "greenpeace" : [
+        "Bem vindo",
+        "Ao jogo",
+        "sede do GreenPeace Fortaleza"
     ]
 }
 var index = -1;
@@ -47,8 +50,8 @@ function proxima_fala(){
             case 'desmatamento':
                 iniciarDesmatamento();
             break;
-            case 'sujeira':
-                iniciarSujeira();
+            case 'poluicao':
+                iniciarPoluicao();
             break;
         }
     }

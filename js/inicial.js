@@ -1,4 +1,4 @@
-var tela_atual = 'home';
+var tela_atual = 'principal';
 function esconderTudo(){
     $("#floresta").hide();   
     $("#animais").hide();
@@ -8,6 +8,12 @@ function esconderTudo(){
     $("#main_div").removeClass("principal");
     $("#voltar").show();
     index = -1;
+}
+
+function mudarTela(tela){
+    $("#main_div").removeClass(tela_atual);
+    $("#main_div").addClass(tela);
+    tela_atual = tela;
 }
 
 function sairJogos(){
@@ -34,37 +40,33 @@ function mostrarTudo(){
 }
 $("#voltar").hide();
 $("#floresta").click(function(){
-    $("#main_div").addClass("queimada");
-    tela_atual = 'queimada';
+    mudarTela('queimada');
     esconderTudo();
     proxima_fala();
 });
 $("#lago").click(function(){
-    tela_atual = 'sujeira';
+    mudarTela('poluicao');
     esconderTudo();
-    $("#main_div").addClass("sujeira");
     proxima_fala();
 });
 $("#animais").click(function(){
-    $("#main_div").addClass("animais");
-    tela_atual = 'trafico';
+    mudarTela('trafico');
     esconderTudo();
     proxima_fala();
 });
 $("#reflorestamento").click(function(){
-    tela_atual = 'desmatamento';
+    mudarTela('desmatamento');
     $("#main_div").addClass("reflorestamento");
     esconderTudo();
     proxima_fala();
 });
 $("#greenpeace").click(function(){
-    $("#main_div").addClass("greenpeace");
-    tela_atual = 'greenpeace';
+    mudarTela('greenpeace');
     proxima_fala();
     esconderTudo();
 });
 $("#voltar").click(function(){
-    tela_atual = 'home';
+    mudarTela('principal');
     $("#comunica").hide();
     sairJogos();
     esconderTudo();
