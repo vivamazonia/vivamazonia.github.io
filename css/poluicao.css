@@ -1,26 +1,29 @@
 #poluicao_esteira1, #poluicao_esteira2, #poluicao_esteira3{
-    position:absolute;
+    position: absolute;
     display: flex;
-    width: 76.2%;
-    height: 12%;
+    width: 99%;
+    height: 16%;
     margin: 0;
     padding: 0;
-    left: 11.9%;
+    left: 0%;
     top: 43%;
 }
 #poluicao_esteira2{
-    top: 54%;
+    top: 52%;
+}
+#poluicao_lixeiras{
+    position: absolute;
+    display: flex;
+    width: 49%;
+    height: 25%;
+    bottom: 0;
+    left: 25%;
 }
 .poluicao_item{
     width: 10%;
     height: 100%;
     position: absolute;
     background-repeat: no-repeat;
-}
-#poluicao_lixeiras > div{
-    position: absolute;
-    bottom: 12%;
-    display: flex;
 }
 #poluicao_lixeiras .plastico{
     left: 26%;
@@ -35,8 +38,8 @@
     left: 56%;
 }
 #poluicao_lixeiras > div{
-    width: 18%;
-    height: 18%;
+    width: 100%;
+    height: 100%;
 }
 .poluicao_item.plastico{
     background-image: url("../assets/lixo/plástico.png");
@@ -59,7 +62,7 @@
     background-position-y: bottom;
 }
 #poluicao_lixeiras > div{
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position-x: center;
 }

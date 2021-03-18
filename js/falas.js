@@ -1,12 +1,10 @@
 var falas = {
-    "principal" : [
+    "home" : [
         "Bem vindo",
         "Ao jogo",
         "VIVAMAZONIA"
     ],
     "queimada" : [
-        "Bem vindo",
-        "Ao jogo",
         "queimada"
     ],
     "poluicao" : [

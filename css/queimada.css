@@ -15,22 +15,21 @@
     -ms-align-content:flex-start;
     -webkit-align-content:flex-start;
     align-content:flex-start;
-    width: 76.2%;
-    height: 13%;
-    margin: auto;
+    width: 98%;
+    height: 16%;
     position: absolute;
 }
 .linha-queimada.linha1{
-    top: 22%;
+    top: 17%;
 }
 .linha-queimada.linha2{
-    top: 36%;
+    top: 34%;
 }
 .linha-queimada.linha3{
-    top: 50%;
+    top: 51%;
 }
 .linha-queimada.linha4{
-    top: 64%;
+    top: 68%;
 }
 .linha-queimada > :nth-child(1){
     left: 4%;
@@ -61,7 +60,4 @@
     background-size: 65%;
     background-repeat: no-repeat;
     background-position-x: center;
-}
-#queimadas{
-    margin-left: 11.9%;
 }

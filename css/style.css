@@ -3,46 +3,49 @@
 html{
     background: black;
 }
-#main_div{
-    width: auto;
-    height: 100%;
-    left:15%;
+*{
+    z-index: 0;
 }
 #comunica{
     display: none;
 }
 #caixa_texto{
-    width: 53.2%;
-    left: 34%;
-    bottom: 5.5%;;
+    width: 67%;
+    right: 0%;
+    bottom: 0;
     position: absolute;
     background-image: url(../assets/dialogo.png);
     background-repeat: no-repeat;
-    background-size: 95%;
-    height: 30%;
-    padding: 20px;
+    background-size: 100%;
+    z-index: 10000;
+    height: 36%;
 }
 #comunica_personagem{
-    width: 36.5%;
-    left: 9.9%;
-    bottom: 10.3%;
+    width: 39.5%;
+    left: 0;
+    bottom: 0;
+    z-index: 10000;
     background-image: url(../assets/julia1.png);
-    background-size: 85%;
-    background-repeat: no-repeat;    
+    background-size: 100%;
+    background-repeat: no-repeat;
     background-position-y: bottom;
     position: absolute;
     height: 66%;
 }
 #proxima_fala_btn{
-    width: 80px;
-    height: 80px;
-    right: 0;
-    bottom: 0;
+    width: 8%;
+    height: 31%;
+    right: 3%;
+    bottom: 16%;
     position: absolute;
+    background: url("../assets/next.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
 }
 #texto{
-    padding: 5%;
-    padding-top: 7%;
+    padding: 8%;
+    padding-top: 10%;
     font-family: Odin;
     font-size: 30px;
     color: white;
