@@ -3,7 +3,6 @@ var timeouts = [];
 var itens = [];
 function iniciarPoluicao(){
     $("#poluicao").show();
-    
     $('html').css("cursor",'url("assets/lixo/rede.png"), auto');
     console.log($('html').css("cursor"));
     for(var i = 0; i < 10; i++){
@@ -12,6 +11,7 @@ function iniciarPoluicao(){
 }
 function sairSujeita(){
     $("#poluicao").hide();
+    $('html').css("cursor",'default');
     for(var i = 0; i < 15; i++){
         clearTimeout(timeouts[i]);
     }
@@ -24,7 +24,7 @@ function jogarLixo(lixeira){
         if($("html").css('cursor').includes(lixeira)){
             $(lixoAtual).remove();
             lixoAtual = null;
-            $('html').css("cursor",'default');
+            $('html').css("cursor",'url("assets/lixo/rede.png"), auto');
         }else{
             //alert('errou tenta denovo');
         }
@@ -62,16 +62,16 @@ function criarItem(esteira){
             lixoAtual = item;
             switch(item.className){
                 case 'poluicao_item plastico':
-                    $('html').css("cursor",'url("../assets/lixo/plástico.png"), auto');
+                    $('html').css("cursor",'url("assets/lixo/rede_plastico.png"), auto');
                 break;
                 case 'poluicao_item papel':
-                    $('html').css("cursor",'url("../assets/lixo/papel.png"), auto');
+                    $('html').css("cursor",'url("assets/lixo/rede_papel.png"), auto');
                 break;
                 case 'poluicao_item metal':
-                    $('html').css("cursor",'url("../assets/lixo/metal.png"), auto');
+                    $('html').css("cursor",'url("assets/lixo/rede_metal.png"), auto');
                 break;
                 case 'poluicao_item vidro':
-                    $('html').css("cursor",'url("../assets/lixo/vidro.png"), auto');
+                    $('html').css("cursor",'url("assets/lixo/rede_vidro.png"), auto');
                 break;
             }
             
@@ -80,7 +80,7 @@ function criarItem(esteira){
     $("#poluicao_esteira"+esteira).append(item);
     item.animacao = $(item).animate(
     {
-        left: subtrairPx($("#poluicao_esteira"+esteira).css('width'),$(item).css('width'))
+        left: '92%'
     },15000,function(){if(lixoAtual != item ){ (this).remove(); console.log('errou');}});
     itens.push(item);
 }

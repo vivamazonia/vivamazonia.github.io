@@ -1,16 +1,17 @@
-var tela_atual = 'principal';
+var tela_atual = 'inicio';
 function esconderTudo(){
-    $("#floresta").hide();   
-    $("#animais").hide();
-    $("#reflorestamento").hide();
-    $("#lago").hide();
-    $("#greenpeace").hide();
+    $("#home").hide();
     $("#main_div").removeClass("principal");
     $("#voltar").show();
     index = -1;
 }
 
 function mudarTela(tela){
+    if(tela == 'principal'){
+        sairJogos();
+        esconderTudo();
+        mostrarTudo();
+    }
     $("#main_div").removeClass(tela_atual);
     $("#main_div").addClass(tela);
     tela_atual = tela;
@@ -23,13 +24,9 @@ function sairJogos(){
     sairTraficoAnimais();
 }
 function mostrarTudo(){
-    $("#floresta").show();
+    $("#home").show();
     sairQueimadas();
     sairDesmatamento();
-    $("#animais").show();
-    $("#reflorestamento").show();
-    $("#lago").show();
-    $("#greenpeace").show();
     $("#main_div").addClass("principal");
     $("#main_div").removeClass("floresta");
     $("#main_div").removeClass("animais");
@@ -39,6 +36,18 @@ function mostrarTudo(){
     $("#voltar").hide();
 }
 $("#voltar").hide();
+$("#info").click(function(){
+    mudarTela('info');
+    $("#voltar").show();
+});
+$("#como_jogar").click(function(){
+    mudarTela('como_jogar');
+    $("#voltar").show();
+});
+$("#jogar").click(function(){
+    mudarTela('principal');
+    proxima_fala();
+});
 $("#floresta").click(function(){
     mudarTela('queimada');
     esconderTudo();
@@ -66,9 +75,10 @@ $("#greenpeace").click(function(){
     esconderTudo();
 });
 $("#voltar").click(function(){
-    mudarTela('principal');
+    if(tela_atual == 'info' || tela_atual == 'como_jogar'){
+        mudarTela('inicio');
+    }else{
+        mudarTela('principal');
+    }
     $("#comunica").hide();
-    sairJogos();
-    esconderTudo();
-    mostrarTudo();
 });

@@ -1,96 +1,144 @@
 #voltar{
-    width: 80px;
-    height: 80px;
+    width: 6%;
+    height: 10%;
     position: absolute;
-    left: 81.5%;
-    top: 3%;
+    right: 12%;
+    top: 10%;
     background: green;
     opacity: 30%;
+    cursor: default;
+}
+#info{
+    position: absolute;
+    width: 5.5%;
+    height: 10%;
+    bottom: 29%;
+    left: 15.5%;
+}
+#como_jogar{
+    position: absolute;
+    width: 5.5%;
+    height: 10%;
+    bottom: 29%;
+    left: 21.5%;
+}
+#jogar{
+    position: absolute;
+    width: 14%;
+    height: 10%;
+    bottom: 29%;
+    left: 43%;
 }
 #floresta{
-    width: 270px;
-    height: 250px;
+    width: 20%;
+    height: 33%;
     position: absolute;
     left: 12%;
+    top: 10%;
     background: red;
     opacity: 30%;
 }
 #animais{
-    width: 170px;
-    height: 150px;
+    width: 13%;
+    height: 20%;
     position: absolute;
     left: 20.5%;
-    top:63%;
+    bottom: 20%;
     background: orangered;
     opacity: 30%;
 }
 #reflorestamento{
-    width: 230px;
-    height: 180px;
+    width: 18%;
+    height: 25%;
     position: absolute;
     left: 40.5%;
-    top:69%;
+    bottom: 11%;
     background: greenyellow;
     opacity: 30%;
 }
 #lago{
-    width: 305px;
-    height: 275px;
+    width: 23%;
+    height: 40%;
     position: absolute;
-    left: 65.5%;
-    top:54%;
+    left: 65%;
+    bottom: 10.5%;
     background: blue;
     opacity: 30%;
 }
 #greenpeace{
-    width: 270px;
-    height: 265px;
+    width: 20%;
+    height: 33%;
     position: absolute;
     left: 39.5%;
-    top: 22%;
+    top: 28%;
     background: green;
     opacity: 30%;
 }
+.inicio{
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 77%;
+    background-repeat: no-repeat;
+    background-image: url("../assets/tela/inicio.png") !important;
+}
+.info{
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 77%;
+    background-repeat: no-repeat;
+    background-image: url("../assets/tela/info.png") !important;
+}
+.como_jogar{
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 77%;
+    background-repeat: no-repeat;
+    background-image: url("../assets/tela/info.png") !important;
+}
 .principal{
     background-position-x: center;
-    background-position-y: bottom;
+    background-position-y: center;
     background-size: 77%;
     background-repeat: no-repeat;
     background-image: url("../images/main.jpeg") !important;
 }
 .trafico{
     background-position-x: center;
+    background-position-y: center;
     background-size: 77%;
     background-repeat: no-repeat;
     background-image: url("../images/main.jpeg") !important;
 }
 .desmatamento{
     background-position-x: center;
+    background-position-y: center;
     background-size: 77%;
     background-repeat: no-repeat;
     background-image: url("../images/main.jpeg") !important;
 }
 .queimada{
     background-position-x: center;
+    background-position-y: center;
     background-size: 77%;
     background-repeat: no-repeat;
-    background-position-y: 80px;
     background-image: url("../assets/tela/queimada.png") !important;
 }
 .poluicao{
     background-position-x: center;
+    background-position-y: center;
     background-size: 77%;
     background-repeat: no-repeat;
     background-image: url("../assets/tela/rio.png") !important;
 }
 .greenpeace{
     background-position-x: center;
+    background-position-y: center;
     background-size: 77%;
     background-repeat: no-repeat;
     background-image: url("../images/main.jpeg") !important;
 }
 
-#queimadas, #desmatamento, #poluicao, #trafico_animais{
+#queimadas, #desmatamento, #poluicao, #trafico_animais,#home{
     display: none;
     background-color: transparent;
 }

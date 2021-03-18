@@ -8,11 +8,15 @@ function sairQueimadas(){
 
 function vitoria_queimada(){
     alert("Você ganhou!");
+    sairQueimadas();
+    mudarTela('principal');
     mostrarTudo();
 }
 
 function derrota_queimada(){
     alert("Você perdeu!");
+    sairQueimadas();
+    mudarTela('principal');
     mostrarTudo();
 
 }

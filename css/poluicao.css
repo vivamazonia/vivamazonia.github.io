@@ -1,47 +1,62 @@
 #poluicao_esteira1, #poluicao_esteira2, #poluicao_esteira3{
     position:absolute;
     display: flex;
-    top: 0;
     width: 76.2%;
-    height: 100px;
+    height: 12%;
     margin: 0;
     padding: 0;
     left: 11.9%;
-    top: 260;
+    top: 43%;
 }
 #poluicao_esteira2{
-    top: 360;
+    top: 54%;
 }
 .poluicao_item{
-    width: 100px;
-    height: 100px;
+    width: 10%;
+    height: 100%;
     position: absolute;
     background-repeat: no-repeat;
 }
-#poluicao_lixeiras{
-    margin-top: 350px;
+#poluicao_lixeiras > div{
+    position: absolute;
+    bottom: 12%;
     display: flex;
-    padding-left: 30%;
+}
+#poluicao_lixeiras .plastico{
+    left: 26%;
+}
+#poluicao_lixeiras .papel{
+    left: 36%;
+}
+#poluicao_lixeiras .metal{
+    left: 46%;
+}
+#poluicao_lixeiras .vidro{
+    left: 56%;
 }
 #poluicao_lixeiras > div{
-    width: 150px;
-    height: 150px;
+    width: 18%;
+    height: 18%;
 }
 .poluicao_item.plastico{
     background-image: url("../assets/lixo/plástico.png");
-    background-size: 129%;
+    background-size: 90%;
+    background-position-y: bottom;
 }
 .poluicao_item.papel{
     background-image: url("../assets/lixo/papel.png");
-    background-size: 116%;
+    background-size: 90%;
+    background-position-y: bottom;
 }
 .poluicao_item.metal{
     background-image: url("../assets/lixo/metal.png");
-    background-size: 130%;
+    background-size: 90%;
+    background-position-y: bottom;
 }
 .poluicao_item.vidro{
     background-image: url("../assets/lixo/vidro.png");
-    background-size: 129%;
+    background-size: 90%;
+    background-position-y: bottom;
 }
 #poluicao_lixeiras > div{
     background-size: contain;

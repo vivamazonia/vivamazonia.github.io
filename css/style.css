@@ -14,7 +14,7 @@ html{
 #caixa_texto{
     width: 53.2%;
     left: 34%;
-    bottom: 0;
+    bottom: 5.5%;;
     position: absolute;
     background-image: url(../assets/dialogo.png);
     background-repeat: no-repeat;
@@ -25,11 +25,11 @@ html{
 #comunica_personagem{
     width: 36.5%;
     left: 9.9%;
-    bottom: 0;
+    bottom: 10.3%;
     background-image: url(../assets/julia1.png);
     background-size: 85%;
-    background-repeat: no-repeat;
-    background-position-y: -20px;
+    background-repeat: no-repeat;    
+    background-position-y: bottom;
     position: absolute;
     height: 66%;
 }

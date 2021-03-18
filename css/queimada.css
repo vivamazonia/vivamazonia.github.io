@@ -1,13 +1,13 @@
 .local-queimada{
-    width: 8.54%;
-    height: 95px;
+    width: 10%;
+    height: 100%;
+    position: absolute;
 }
 .linha-queimada{
     letter-spacing:-.31em;
     *letter-spacing:normal;
     *word-spacing:-.43em;
     text-rendering:optimizespeed;
-    font-family:FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
     display:-webkit-flex;
     -webkit-flex-flow:row wrap;
     display:-ms-flexbox;
@@ -15,8 +15,46 @@
     -ms-align-content:flex-start;
     -webkit-align-content:flex-start;
     align-content:flex-start;
-    max-width:1280px;
-    margin:auto;
+    width: 76.2%;
+    height: 13%;
+    margin: auto;
+    position: absolute;
+}
+.linha-queimada.linha1{
+    top: 22%;
+}
+.linha-queimada.linha2{
+    top: 36%;
+}
+.linha-queimada.linha3{
+    top: 50%;
+}
+.linha-queimada.linha4{
+    top: 64%;
+}
+.linha-queimada > :nth-child(1){
+    left: 4%;
+}
+.linha-queimada > :nth-child(2){
+    left: 16%;
+}
+.linha-queimada > :nth-child(3){
+    left: 28%;
+}
+.linha-queimada > :nth-child(4){
+    left: 40%;
+}
+.linha-queimada > :nth-child(5){
+    left: 52%;
+}
+.linha-queimada > :nth-child(6){
+    left: 64%;
+}
+.linha-queimada > :nth-child(7){
+    left: 76%;
+}
+.linha-queimada > :nth-child(8){
+    left: 88%;
 }
 .floresta-fogo-queimada{
     background-image: url('../assets/queimadas/chama.png');
@@ -25,5 +63,5 @@
     background-position-x: center;
 }
 #queimadas{
-    margin-left: 155px;
+    margin-left: 11.9%;
 }
