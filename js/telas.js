@@ -1,5 +1,5 @@
 var tela_atual = 'inicio';
-
+var comunicacao_parte = 'inicio';
 function mudarTela(tela){
     $("#voltar_btn").show();
     $("#main_div").removeClass(tela_atual);
@@ -7,18 +7,21 @@ function mudarTela(tela){
     $("#"+tela_atual).hide();
     $("#"+tela).show();    
     tela_atual = tela;
-    index = -1;
+    muda_comunicacao('inicio');
     switch(tela){
         case 'home':
-            sairJogos();
             $("#voltar_btn").hide();
+            sairJogos();
             //proxima_fala();
         break;
         case 'inicio':
             $("#voltar_btn").hide();
 
         break;
-        case 'queimada':
+        case 'queimadas_resgatar':
+            proxima_fala();
+        break;
+        case 'queimadas_apagar':
             proxima_fala();
         break;
         case 'poluicao':
@@ -41,7 +44,10 @@ $("#jogar_btn").click(function(){
 
 
 $("#floresta_btn").click(function(){
-    mudarTela('queimada');
+    if(!animais_resgatados)
+        mudarTela('queimadas_resgatar');
+    else if(!fogo_apagado)
+        mudarTela('queimadas_apagar');
 });
 
 $("#lago_btn").click(function(){
@@ -49,19 +55,12 @@ $("#lago_btn").click(function(){
 });
 $("#animais_btn").click(function(){
     mudarTela('trafico');
-    esconderTudo();
-    proxima_fala();
 });
 $("#reflorestamento_btn").click(function(){
     mudarTela('desmatamento');
-    $("#main_div").addClass("reflorestamento");
-    esconderTudo();
-    proxima_fala();
 });
 $("#greenpeace_btn").click(function(){
     mudarTela('greenpeace');
-    proxima_fala();
-    esconderTudo();
 });
 $("#voltar_btn").click(function(){
     if(tela_atual == 'info' || tela_atual == 'como_jogar'){

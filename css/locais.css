@@ -77,6 +77,8 @@
     top: 22%;
     background: green;
 }
+
+
 .inicio{
     background-image: url("../assets/tela/inicio.png") !important;
 }
@@ -95,8 +97,20 @@
 .desmatamento{
     background-image: url("../images/main.jpeg") !important;
 }
-.queimada{
-    background-image: url("../assets/tela/queimada.png") !important;
+.queimadas_resgatar{
+    background-image: url("../assets/tela/queimadas_resgatar.png") !important;
+}
+.queimadas_resgatar_onça{
+    background-image: url("../assets/tela/queimadas_resgatar_onça.png") !important;
+}
+.queimadas_resgatar_aves{
+    background-image: url("../assets/tela/queimadas_resgatar_aves.png") !important;
+}
+.queimadas_resgatar_anta{
+    background-image: url("../assets/tela/queimadas_resgatar_anta.png") !important;
+}
+.queimadas_apagar{
+    background-image: url("../assets/tela/queimadas_apagar.png") !important;
 }
 .poluicao{
     background-image: url("../assets/tela/rio.png") !important;
@@ -105,6 +119,6 @@
     background-image: url("../images/main.jpeg") !important;
 }
 
-#voltar_btn, #queimadas, #desmatamento, #poluicao, #trafico_animais, #home{
+#voltar_btn, #queimadas_resgatar, #queimadas_apagar, #desmatamento, #poluicao, #trafico_animais, #home{
     display: none;
 }

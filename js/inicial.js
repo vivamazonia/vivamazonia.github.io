@@ -1,3 +1,5 @@
+var animais_resgatados = false;
+var fogo_apagado = false;
 function esconderTudo(){
 }
 

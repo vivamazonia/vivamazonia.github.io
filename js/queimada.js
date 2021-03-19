@@ -1,20 +1,31 @@
 var intervalID;
-function sairQueimadas(){
-    $("#queimadas").hide();
-    $("#queimadas").hide();
-    $(".local-queimada").hide();
-    clearInterval(intervalID);
+
+function resgate_onça(){
+    $("#main_div").addClass('queimadas_resgatar_onça');
+    muda_comunicacao('onça');
+    proxima_fala();
+}
+function resgate_aves(){
+    $("#main_div").addClass('queimadas_resgatar_aves');
+    muda_comunicacao('aves');
+    proxima_fala();
+}
+function resgate_anta(){
+    $("#main_div").addClass('queimadas_resgatar_anta');
+    muda_comunicacao('anta');
+    proxima_fala();
 }
 
 function vitoria_queimada(){
-    alert("Você ganhou!");
-    sairQueimadas();
+    muda_comunicacao('vitoria');
+    fogo_apagado = true;
+    clearInterval(intervalID);
     proxima_fala();
 }
 
 function derrota_queimada(){
-    alert("Você perdeu!");
-    sairQueimadas();
+    muda_comunicacao('derrota');
+    clearInterval(intervalID);
     proxima_fala();
 }
 
@@ -79,3 +90,37 @@ function pintarAleatorio(inicio){
 
     }
 }
+
+$("#queimadas_resgatar_onça").click(function(){
+    $("#main_div").removeClass('queimadas_resgatar_onça');
+    $("#queimadas_resgatar_onça").hide();
+    muda_comunicacao('encontrado_onça');
+    proxima_fala();
+});
+var harpia_encontrada = false;
+var tucano_encontrado = false;
+$("#queimadas_resgatar_harpia").click(function(){
+    harpia_encontrada = true;
+    $("#queimadas_resgatar_harpia").hide();
+    if(tucano_encontrado && harpia_encontrada){
+        $("#main_div").removeClass('queimadas_resgatar_aves');
+        muda_comunicacao('encontrado_aves');
+        proxima_fala();
+    }
+});
+$("#queimadas_resgatar_tucano").click(function(){
+    tucano_encontrado = true;
+    $("#queimadas_resgatar_tucano").hide();
+    if(tucano_encontrado && harpia_encontrada){
+        $("#main_div").removeClass('queimadas_resgatar_aves');
+        muda_comunicacao('encontrado_aves');
+        proxima_fala();
+    }
+});
+
+$("#queimadas_resgatar_anta").click(function(){
+    $("#main_div").removeClass('queimadas_resgatar_anta');
+    $("#queimadas_resgatar_anta").hide();
+    muda_comunicacao('encontrado_anta');
+    proxima_fala();
+});

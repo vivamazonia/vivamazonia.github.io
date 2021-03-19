@@ -61,3 +61,37 @@
     background-repeat: no-repeat;
     background-position-x: center;
 }
+
+#queimadas_resgatar_onça, #queimadas_resgatar_harpia, #queimadas_resgatar_tucano, #queimadas_resgatar_anta{
+    position: absolute;
+    width: 7%;
+    height: 13%;
+    bottom: 23%;
+    border: blueviolet 1px solid;
+}
+
+#queimadas_resgatar_onça{
+    width: 20%;
+    left: 20%;
+    top: 35%;
+}
+
+#queimadas_resgatar_harpia{
+    top: 11%;
+    left: 19%;
+    height: 15%;
+}
+#queimadas_resgatar_tucano{
+    top: 1%;
+    right: 22%;
+}
+#queimadas_resgatar_anta{
+    width: 19%;
+    height: 20%;
+    bottom: 14%;
+    right: 12%;
+}
+
+#queimadas_resgatar_onça,#queimadas_resgatar_harpia,#queimadas_resgatar_tucano, #queimadas_resgatar_anta{
+    display: none;
+}

@@ -1,46 +1,128 @@
 var falas = {
-    "home" : [
-        "Bem vindo",
-        "Ao jogo",
-        "VIVAMAZONIA"
-    ],
-    "queimada" : [
-        "queimada"
-    ],
-    "poluicao" : [
-        "Bem vindo"
-    ],
-    "trafico" : [
-        "Bem vindo",
-        "Ao jogo",
-        "trafico"
-    ],
-    "desmatamento" : [
-        "Bem vindo",
-        "Ao jogo",
-        "desmatamento"
-    ],
-    "greenpeace" : [
-        "Bem vindo",
-        "Ao jogo",
-        "sede do GreenPeace Fortaleza"
-    ]
+    "home" : {
+        "inicio" : [
+            "Clique no local para interagir!"
+        ],
+    },
+    "queimadas_apagar" : {
+        "inicio" : [
+            "Agora vamos apagar"
+        ],
+        "vitoria" : [
+            "Conseguimos controlar o incêndio!",
+            "Vamos procurar outra atividade agora!"
+        ],
+        "derrota" : [
+            "Não conseguimos controlar o incêndio!",
+            "Vamos tentar novamente!"
+        ]
+    },
+    "queimadas_resgatar" : {
+        "inicio" : [
+            "Não pode ser! Nossa floresta está em chamas!",
+            "Temos que salvar os animais da floresta!"
+        ],
+        "onça" : [
+            "Uma onça foi vista nas redondesas, temos que procurar a onça",
+            "Se você achar clique que vamos resgatar"
+        ],
+        "encontrado_onça" : [
+            "Muito bem! Resgatamos a onça!",
+            "Ela será levada para a nossa sede para ser tratada e depois envolvida para um ambiente seguro.",
+            "Você pode visitá-la e saber mais sobre ela clicando na nossa sede"
+        ],
+        "aves" : [
+            "Uma harpia e um tucano foram vistos nas redondesas, temos que procurar eles",
+            "Se você achar clique que vamos resgatar"
+        ],
+        "encontrado_aves" : [
+            "Muito bem! Resgatamos a Harpia e o Tucano!",
+            "Eles serão levados para a nossa sede para serem tratados e depois envolvidos para um ambiente seguro.",
+            "Você pode visitá-los e saber mais sobre clicando na nossa sede"
+        ],
+        "anta" : [
+            "Uma anta foi vista nas redondesas, temos que procurar ela",
+            "Se você achar clique que vamos resgatar"
+        ],
+        "encontrado_anta" : [
+            "Muito bem! Resgatamos a Anta!",
+            "Ela será levada para a nossa sede para ser tratada e depois envolvida para um ambiente seguro.",
+            "Você pode visitá-la e saber mais sobre clicando na nossa sede.",
+            "Agora vamos apagar todo esse fogo!"
+        ]
+    },
+    "poluicao" : {
+        "inicio" : [
+            "Vamos limpar"
+        ]
+    },
+    "trafico" : {
+        "inicio" : [
+            "Vamos salvar!"
+        ],
+    },
+    "desmatamento" : {
+        "inicio" : [
+            "Replantar!"
+        ],
+    },
+    "greenpeace" : {
+        "inicio" : [
+            "Venha conhecer!"
+        ],
+    }
 }
 var index = -1;
 var max_index = 0;
 function proxima_fala(){
     $("#comunica").show();
-    max_index = falas[tela_atual].length;
+    max_index = falas[tela_atual][comunicacao_parte].length;
     index += 1;
-    $("#texto").html(falas[tela_atual][index]);
+    $("#texto").html(falas[tela_atual][comunicacao_parte][index]);
     if(max_index == index){
         $("#comunica").hide();
         switch(tela_atual){
             case 'home':
 
             break;
-            case 'queimada':
-                iniciarQueimadas();
+            case 'queimadas_resgatar':
+                switch(comunicacao_parte){
+                    case "inicio":
+                        resgate_onça();
+                    break;
+                    case "onça":
+                        $("#queimadas_resgatar_onça").show();
+                    break;
+                    case "encontrado_onça":
+                        resgate_aves();
+                    break;
+                    case "aves":
+                        $("#queimadas_resgatar_harpia, #queimadas_resgatar_tucano").show();
+                    break;
+                    case "encontrado_aves":
+                        resgate_anta();
+                    break;
+                    case "anta":
+                        $("#queimadas_resgatar_anta").show();
+                    break;
+                    case "encontrado_anta":
+                        animais_resgatados = true;
+                        mudarTela('queimadas_apagar');
+                    break;
+                }
+            break;
+            case 'queimadas_apagar':
+                switch(comunicacao_parte){
+                    case "inicio":
+                        iniciarQueimadas();
+                    break;
+                    case "vitoria":
+                        mudarTela('home');
+                    break;
+                    case "derrota":
+                        iniciarQueimadas();
+                    break;
+                }
             break;
             case 'trafico':
                 iniciarTraficoAnimais();
@@ -53,4 +135,9 @@ function proxima_fala(){
             break;
         }
     }
+}
+
+function muda_comunicacao(etapa){
+    index = -1;
+    comunicacao_parte = etapa;
 }
