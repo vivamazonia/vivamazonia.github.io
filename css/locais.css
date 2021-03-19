@@ -38,7 +38,7 @@
     right: 0%;
     height: 11%;
 }
-#floresta_btn, #animais_btn, #reflorestamento_btn, #lago_btn, #greenpeace_btn{
+#floresta_btn, #animais_btn, #reflorestamento_btn, #lago_btn, #sede_btn{
     position: absolute;
     opacity: 30%;
 }
@@ -70,7 +70,7 @@
     right: 0;
     background: blue;
 }
-#greenpeace_btn{
+#sede_btn{
     width: 26%;
     height: 44%;
     left: 36%;
@@ -92,7 +92,7 @@
     background-image: url("../images/main.jpeg") !important;
 }
 .trafico{
-    background-image: url("../images/main.jpeg") !important;
+    background-image: url("../assets/tela/trafico_escolha.png") !important;
 }
 .desmatamento{
     background-image: url("../images/main.jpeg") !important;
@@ -115,7 +115,7 @@
 .poluicao{
     background-image: url("../assets/tela/rio.png") !important;
 }
-.greenpeace{
+.sede{
     background-image: url("../images/main.jpeg") !important;
 }
 

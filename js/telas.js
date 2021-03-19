@@ -27,6 +27,9 @@ function mudarTela(tela){
         case 'poluicao':
             proxima_fala();
         break;
+        case 'sede':
+            $("#sede").show();
+        break;
         default:
     }
 }
@@ -59,11 +62,19 @@ $("#animais_btn").click(function(){
 $("#reflorestamento_btn").click(function(){
     mudarTela('desmatamento');
 });
-$("#greenpeace_btn").click(function(){
-    mudarTela('greenpeace');
+$("#sede_btn").click(function(){
+    mudarTela('sede');
 });
 $("#voltar_btn").click(function(){
-    if(tela_atual == 'info' || tela_atual == 'como_jogar'){
+    if(tela_atual == 'sede'){
+        if(info_animal){
+            $(".sede_info").hide();
+            $("#sede_menu").show();
+            info_animal = false;
+        }else{
+            mudarTela('home');
+        }
+    }else if(tela_atual == 'info' || tela_atual == 'como_jogar'){
         mudarTela('inicio');
     }else{
         mudarTela('home');

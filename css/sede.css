@@ -1,0 +1,99 @@
+#sede{
+    position: absolute;
+    width: 100%;
+    height: 82%;
+    display: none;
+}
+#sede_menu > div{
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    border-radius: 20px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-color:darkslateblue;
+}
+
+#sede_onça{
+    background-image: url("../assets/animais/Onça.png");
+    grid-area: onça;
+}
+
+#sede_harpia{
+    background-image: url("../assets/animais/Harpia.png");
+    grid-area: harpia;
+}
+
+#sede_tucano{
+    background-image: url("../assets/animais/Tucano.png");
+    grid-area: tucano;
+}
+#sede_anta{
+    background-image: url("../assets/animais/anta.png");
+    grid-area: anta;
+}
+
+#sede_boto{
+    background-image: url("../assets/animais/boto.png");
+    grid-area: boto;
+}
+
+#sede_peixe_boi{
+    background-image: url("../assets/animais/peixe_boi.png");
+    grid-area: peixe_boi;
+}
+#sede_pirarucu{
+    background-image: url("../assets/animais/pirarucu.png");
+    grid-area: pirarucu;
+}
+
+#sede_jacaretinga{
+    background-image: url("../assets/animais/jacaretinga.png");
+    grid-area: jacaretinga;
+}
+
+.sede_info{
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 100%;
+    display: none;
+}
+#sede_menu{
+    width: 80%;
+    height: 100%;
+    left: 9%;
+    position: absolute;
+    display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 40% 40%;
+	grid-template-areas:
+        "onça harpia tucano anta"
+        "pirarucu boto jacaretinga peixe_boi";
+	grid-gap: 10px;
+}
+.sede_info .imagens{
+    display: flex;
+}
+.sede_info .imagens .texto{
+    max-width: 40%;
+    font-family: Odin;
+    font-size: 30px;
+    color: white;
+}
+
+.sede_info .imagens .texto{
+    padding: 20px;
+}
+
+.sede_info .imagens > img{
+    padding-top: 0;
+}
+.sede_info .titulo{
+    color: white;
+    margin-top: -3%;
+    text-align: center;
+    font-family: Roadbrush;
+}
