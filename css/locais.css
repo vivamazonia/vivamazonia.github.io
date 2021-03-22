@@ -8,11 +8,13 @@
     left: 11%;
     top: 4%;
     background-size: 100%;
+    cursor: url("../assets/tela/apontador_seta.png"), auto;
     background-repeat: no-repeat;
 }
 
 /*Tela inicial*/
 #info_btn, #como_jogar_btn, #jogar_btn, #voltar_btn{
+    cursor: url("../assets/tela/apontador_mão.png"), auto;
     position: absolute;
     width: 7%;
     height: 13%;
@@ -31,7 +33,6 @@
 
 #voltar_btn{
     z-index: 5;
-    cursor: default;
     background-image: url("../assets/voltar.png");
     background-size: 100%;
     top: 2%;
@@ -122,7 +123,7 @@
     background-image: url("../assets/resgate/salvamento\ peixe_boi3.png") !important;
 }
 .desmatamento{
-    background-image: url("../images/main.jpeg") !important;
+    background-image: url("../assets/tela/desmatamento.png") !important;
 }
 .queimadas_resgatar{
     background-image: url("../assets/tela/queimadas_resgatar.png") !important;

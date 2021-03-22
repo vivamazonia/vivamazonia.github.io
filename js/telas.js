@@ -43,7 +43,7 @@ function mudarTela(tela){
     $("#"+tela_atual).hide();
     $("#"+tela).show();    
     $("#comunica").hide();
-    $("html").css("cursor","default");
+    $("html").css("cursor",'url("../assets/tela/apontador_seta.png"), auto');
     tela_atual = tela;
     muda_comunicacao('inicio');
     switch(tela){

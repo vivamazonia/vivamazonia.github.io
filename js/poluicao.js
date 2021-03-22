@@ -123,7 +123,7 @@ function iniciaLixo(){
 }
 function sairSujeita(){
     $("#poluicao").hide();
-    $('html').css("cursor",'default');
+    $('html').css("cursor",'url("../assets/tela/apontador_seta.png"), auto');
     for(var i = 0; i < timeouts.length; i++){
         clearTimeout(timeouts[i].time);
     }

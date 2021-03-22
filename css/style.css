@@ -2,9 +2,11 @@
 @font-face { font-family: Odin; src: url('fonts/Odin Rounded - Regular.otf'); }
 html{
     background: black;
+    cursor: url("../assets/tela/apontador_seta.png"), auto;
 }
 *{
     z-index: 0;
+    cursor: url("../assets/tela/apontador_seta.png"), auto;
 }
 #comunica{
     display: none;
