@@ -1,7 +1,13 @@
 var falas = {
     "floresta" : {
         "inicio" : [
-            "Clique no local para interagir!"
+            "Oi amigo! Eu sou a Júlia, voluntária do Greenpeace Fortaleza.",
+            "Você conhece a Amazônia? Ela é a maior floresta tropical do mundo!",
+            "Infelizmente ela está sendo destruída aos pouquinhos...",
+            "Nós não podemos deixar que isso aconteça!",
+            "Que tal você me ajudar a preservar a nossa linda floresta?",
+            "Vem comigo, vou te ensinar como podemos ajudar a preservar a Floresta Amazônica.",
+            "Clique em uma das áreas no mapa"
         ],
     },
     "queimadas_apagar" : {
@@ -23,30 +29,30 @@ var falas = {
             "Temos que salvar os animais da floresta!"
         ],
         "onça" : [
-            "Uma onça foi vista nas redondesas, temos que procurar a onça",
+            "Uma onça foi vista nas redondezas, temos que procurar a onça",
             "Se você achar clique que vamos resgatar"
         ],
         "encontrado_onça" : [
             "Muito bem! Resgatamos a onça!",
-            "Ela será levada para a nossa sede para ser tratada e depois envolvida para um ambiente seguro.",
+            "Ela será levada para a nossa sede para ser tratada e depois denvolvida para um ambiente seguro.",
             "Você pode visitá-la e saber mais sobre ela clicando na nossa sede"
         ],
         "aves" : [
-            "Uma harpia e um tucano foram vistos nas redondesas, temos que procurar eles",
+            "Uma harpia e um tucano foram vistos nas redondezas, temos que procurar eles",
             "Se você achar clique que vamos resgatar"
         ],
         "encontrado_aves" : [
             "Muito bem! Resgatamos a Harpia e o Tucano!",
-            "Eles serão levados para a nossa sede para serem tratados e depois envolvidos para um ambiente seguro.",
+            "Eles serão levados para a nossa sede para serem tratados e depois denvolvidos para um ambiente seguro.",
             "Você pode visitá-los e saber mais sobre clicando na nossa sede"
         ],
         "anta" : [
-            "Uma anta foi vista nas redondesas, temos que procurar ela",
+            "Uma anta foi vista nas redondezas, temos que procurar ela",
             "Se você achar clique que vamos resgatar"
         ],
         "encontrado_anta" : [
             "Muito bem! Resgatamos a Anta!",
-            "Ela será levada para a nossa sede para ser tratada e depois envolvida para um ambiente seguro.",
+            "Ela será levada para a nossa sede para ser tratada e depois denvolvida para um ambiente seguro.",
             "Você pode visitá-la e saber mais sobre clicando na nossa sede.",
             "Agora vamos apagar todo esse fogo!"
         ]
@@ -104,7 +110,7 @@ function proxima_fala(){
         $("#comunica").hide();
         switch(tela_atual){
             case 'floresta':
-
+                //proxima_fala();
             break;
             case 'queimadas_resgatar':
                 switch(comunicacao_parte){

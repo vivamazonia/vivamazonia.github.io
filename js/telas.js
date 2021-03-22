@@ -1,5 +1,6 @@
 var tela_atual = 'inicio';
 var comunicacao_parte = 'inicio';
+var primeira_vez_floresta = true;
 function mudarTela(tela){
     console.log(tela_atual);
     $("#voltar_btn").show();
@@ -14,8 +15,8 @@ function mudarTela(tela){
     switch(tela){
         case 'floresta':
             $("#voltar_btn").hide();
+            if(primeira_vez_floresta){ proxima_fala(); primeira_vez_floresta = false};
             sairJogos();
-            //proxima_fala();
         break;
         case 'inicio':
             $("#voltar_btn").hide();
