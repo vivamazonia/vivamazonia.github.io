@@ -17,17 +17,17 @@
 }
 
 #sede_onça{
-    background-image: url("../assets/animais/Onça.png");
+    background-image: url("../assets/animais/onça.png");
     grid-area: onça;
 }
 
 #sede_harpia{
-    background-image: url("../assets/animais/Harpia.png");
+    background-image: url("../assets/animais/harpia.png");
     grid-area: harpia;
 }
 
 #sede_tucano{
-    background-image: url("../assets/animais/Tucano.png");
+    background-image: url("../assets/animais/tucano.png");
     grid-area: tucano;
 }
 #sede_anta{
