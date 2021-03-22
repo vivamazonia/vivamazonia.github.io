@@ -96,6 +96,7 @@ function pintarAleatorio(inicio){
 }
 
 $("#queimadas_resgatar_onça").click(function(){
+    animal_onca = true;
     mudaHumorJulia('feliz');
     $("#main_div").removeClass('queimadas_resgatar_onça');
     $("#queimadas_resgatar_onça").hide();
@@ -106,6 +107,7 @@ var harpia_encontrada = false;
 var tucano_encontrado = false;
 $("#queimadas_resgatar_harpia").click(function(){
     harpia_encontrada = true;
+    animal_harpia = true;
     $("#queimadas_resgatar_harpia").hide();
     if(tucano_encontrado && harpia_encontrada){
         $("#main_div").removeClass('queimadas_resgatar_aves');
@@ -116,6 +118,7 @@ $("#queimadas_resgatar_harpia").click(function(){
 });
 $("#queimadas_resgatar_tucano").click(function(){
     tucano_encontrado = true;
+    animal_tucano = true;
     $("#queimadas_resgatar_tucano").hide();
     if(tucano_encontrado && harpia_encontrada){
         mudaHumorJulia('feliz');
@@ -126,6 +129,7 @@ $("#queimadas_resgatar_tucano").click(function(){
 });
 
 $("#queimadas_resgatar_anta").click(function(){
+    animal_anta = true;
     mudaHumorJulia('feliz');
     $("#main_div").removeClass('queimadas_resgatar_anta');
     $("#queimadas_resgatar_anta").hide();

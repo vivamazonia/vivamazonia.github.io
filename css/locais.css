@@ -30,6 +30,7 @@
 }
 
 #voltar_btn{
+    z-index: 5;
     cursor: default;
     background-image: url("../assets/voltar.png");
     background-size: 100%;

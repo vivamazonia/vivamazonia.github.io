@@ -39,7 +39,7 @@
     right: 0;
     width: 77%;
     height: 36%;
-    z-index: 1000;
+    z-index: 3;
 }
 #luz1 {
     transform: skew(0deg, 10deg);

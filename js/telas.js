@@ -2,6 +2,22 @@ var tela_atual = 'inicio';
 var comunicacao_parte = 'inicio';
 var primeira_vez_floresta = true;
 
+var tela_queimadas_resgate = false;
+var tela_queimadas_apaga = false;
+var tela_trafico_animais = false;
+var tela_desmatamento = false;
+var tela_poluicao = false;
+
+
+var animal_onca = false;
+var animal_harpia = false;
+var animal_tucano = false;
+var animal_anta = false;
+var animal_boto = false;
+var animal_jacaretinga = true;
+var animal_peixe_boi = false;
+var animal_pirarucu = false;
+
 function mudaHumorJulia(humor){
     switch(humor){
         case 'normal':
@@ -62,7 +78,7 @@ function mudarTela(tela){
             proxima_fala();
         break;
         case 'sede':
-            $("#sede").show();
+            inicarSede();
         break;
         default:
     }
@@ -111,7 +127,9 @@ $("#voltar_btn").click(function(){
     }else if(tela_atual == 'info' || tela_atual == 'como_jogar'){
         mudarTela('inicio');
     }else if(tela_atual == 'trafico_animais'){
-        //sair_trafico_animais();
+        sair_trafico_animais();
+        $("#main_div").attr('class','');
+        mudarTela('floresta');
     }else{
         $("#main_div").attr('class','');
         mudarTela('floresta');

@@ -13,10 +13,18 @@ var animal_resgate = '';
 function salvar_animal(){
     mudaHumorJulia('feliz');
     muda_comunicacao('resgatado_'+animal_resgate);
+    if(animal_resgate == 'boto'){
+        animal_boto = true;
+    }
+    if(animal_resgate == 'pirarurcu'){
+        animal_pirarucu = true;
+    }
+    if(animal_resgate == 'peixe_boi'){
+        animal_peixe_boi = true;
+    }
     clearInterval(id_trabalha);
     clearInterval(id_luz);
     proxima_fala();
-    posicaoAtual = {x:0, y:0};
 }
 
 function sair_trafico_animais(){
@@ -42,6 +50,7 @@ function reiniciarTraficoAnimais(){
 
 function iniciarTraficoAnimais(animal) {
     animal_resgate = animal;
+    $("#trafico_animais_carregando").html('0%');
     $("#trafico_animais").show();
     carrega = 0;
     var aproximando = 0;
@@ -119,7 +128,8 @@ $("#luz1").mousemove(function(e){
 });
 $("#luz1").mouseout(function(e){
     $(this).find("#ident1").hide();
-    $(this).find("#ident2").offset({top: e.pageY, left: e.pageX});
+    posicaoAtual.x = e.pageX;
+    posicaoAtual.y = e.pageY;
 });
 $("#luz2").mousemove(function(e){
     $(this).find("#ident2").show();
@@ -129,7 +139,8 @@ $("#luz2").mousemove(function(e){
 });
 $("#luz2").mouseout(function(e){
     $(this).find("#ident2").hide();
-    $(this).find("#ident2").offset({top: e.pageY, left: e.pageX});
+    posicaoAtual.x = e.pageX;
+    posicaoAtual.y = e.pageY;
 });
 
 function resgate_boto(){

@@ -146,7 +146,7 @@ var falas = {
             "Temos outras áreas para ajudar! Vamos lá!"
         ]
     },
-    "greenpeace" : {
+    "sede" : {
         "inicio" : [
             "Essa é nossa sede! É aqui que os animais resgatados ficam enquanto estão em tratamento médico",
             "Assim que eles estiverem melhor vamos devolvê-los para a floresta em um local seguro"
@@ -160,6 +160,9 @@ var falas = {
         "saber_mais" : [            
             "Já que você está aqui não gostaria de ver como os animais que resgatamos estão?",
             "Clique no animal com o mouse e te conto mais sobre ele"
+        ],
+        "animal_bloqueado" : [
+            "Esse animal ainda não foi resgatado, vamos ter que resgatá-lo de outra área antes"
         ]
     }
 }
@@ -222,6 +225,7 @@ function proxima_fala(){
                         resgate_boto();
                     break;
                     case "resgate_boto":
+                        posicaoAtual = {x:0, y:0};
                         iniciarTraficoAnimais('boto');
                     break;
                     case "resgatado_boto":
@@ -229,6 +233,7 @@ function proxima_fala(){
                         resgate_pirarucu();
                     break;
                     case "resgate_pirarucu":
+                        posicaoAtual = {x:0, y:0};
                         iniciarTraficoAnimais('pirarucu');
                     break;
                     case "resgatado_pirarucu":
@@ -236,6 +241,7 @@ function proxima_fala(){
                         resgate_peixe_boi();
                     break;
                     case "resgate_peixe_boi":
+                        posicaoAtual = {x:0, y:0};
                         iniciarTraficoAnimais('peixe_boi');
                     break;
                     case "resgatado_peixe_boi":
