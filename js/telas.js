@@ -110,6 +110,8 @@ $("#voltar_btn").click(function(){
         }
     }else if(tela_atual == 'info' || tela_atual == 'como_jogar'){
         mudarTela('inicio');
+    }else if(tela_atual == 'trafico_animais'){
+        //sair_trafico_animais();
     }else{
         $("#main_div").attr('class','');
         mudarTela('floresta');

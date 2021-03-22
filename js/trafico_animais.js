@@ -16,6 +16,15 @@ function salvar_animal(){
     clearInterval(id_trabalha);
     clearInterval(id_luz);
     proxima_fala();
+    posicaoAtual = {x:0, y:0};
+}
+
+function sair_trafico_animais(){
+    if(id_trabalha != null && id_trabalha != undefined)
+        clearInterval(id_trabalha);
+    if(id_luz != null && id_luz != undefined)
+        clearInterval(id_luz);
+    posicaoAtual = {x:0, y:0};
 }
 
 function encontrado(){
@@ -110,6 +119,7 @@ $("#luz1").mousemove(function(e){
 });
 $("#luz1").mouseout(function(e){
     $(this).find("#ident1").hide();
+    $(this).find("#ident2").offset({top: e.pageY, left: e.pageX});
 });
 $("#luz2").mousemove(function(e){
     $(this).find("#ident2").show();
@@ -119,6 +129,7 @@ $("#luz2").mousemove(function(e){
 });
 $("#luz2").mouseout(function(e){
     $(this).find("#ident2").hide();
+    $(this).find("#ident2").offset({top: e.pageY, left: e.pageX});
 });
 
 function resgate_boto(){
