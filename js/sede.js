@@ -1,9 +1,9 @@
 function inicarSede(){
     $("#sede").show();
     if(animal_onca){
-        $("#sede_onca .bloqueado").hide();
+        $("#sede_onça .bloqueado").hide();
     }else{
-        $("#sede_onca .bloqueado").show();
+        $("#sede_onça .bloqueado").show();
     }
     if(animal_harpia){
         $("#sede_harpia .bloqueado").hide();
