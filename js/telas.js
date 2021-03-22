@@ -9,14 +9,14 @@ var tela_desmatamento = false;
 var tela_poluicao = false;
 
 
-var animal_onca = false;
-var animal_harpia = false;
-var animal_tucano = false;
-var animal_anta = false;
-var animal_boto = false;
+var animal_onca = true;
+var animal_harpia = true;
+var animal_tucano = true;
+var animal_anta = true;
+var animal_boto = true;
 var animal_jacaretinga = true;
-var animal_peixe_boi = false;
-var animal_pirarucu = false;
+var animal_peixe_boi = true;
+var animal_pirarucu = true;
 
 function mudaHumorJulia(humor){
     switch(humor){

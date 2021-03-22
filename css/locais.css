@@ -1,4 +1,6 @@
 /*Configura main */
+
+
 #main_div{
     position: absolute;
     height: 91%;
@@ -8,7 +10,6 @@
     left: 11%;
     top: 4%;
     background-size: 100%;
-    cursor: url("../assets/tela/apontador_seta.png"), auto;
     background-repeat: no-repeat;
 }
 
@@ -87,7 +88,7 @@
     background-image: url("../assets/tela/info.png") !important;
 }
 .como_jogar{
-    background-image: url("../assets/tela/info.png") !important;
+    background-image: url("../assets/tela/como_joga.png") !important;
 }
 .floresta{
     background-image: url("../images/main.jpeg") !important;
@@ -124,6 +125,7 @@
 }
 .desmatamento{
     background-image: url("../assets/tela/desmatamento.png") !important;
+    background-size: 100%;
 }
 .queimadas_resgatar{
     background-image: url("../assets/tela/queimadas_resgatar.png") !important;

@@ -73,9 +73,10 @@
     display: none;
 }
 #sede_menu{
-    width: 80%;
-    height: 100%;
-    left: 9%;
+    width: 69%;
+    height: 92%;
+    left: 15%;
+    top: 6%;
     position: absolute;
     display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
@@ -86,25 +87,34 @@
 	grid-gap: 10px;
 }
 .sede_info .imagens{
-    display: flex;
+    display: flex;    
+    position: absolute;
+    width: 91%;
+    height: 79%;
+    left: 6%;
+    top: 7%;
 }
 .sede_info .imagens .texto{
     max-width: 40%;
-    font-family: Odin;
-    font-size: 30px;
+    font-size: 170%;
+    font-family: 'AristaPro-Fat', sans-serif !important;
     color: white;
 }
 
 .sede_info .imagens .texto{
-    padding: 20px;
+    padding: 3%;
+    padding-top: 0;
 }
 
 .sede_info .imagens > img{
     padding-top: 0;
+    border-radius: 20px;
 }
 .sede_info .titulo{
     color: white;
-    margin-top: -3%;
+    margin-top: -6%;
     text-align: center;
     font-family: Roadbrush;
+    position: absolute;
+    left: 40%;
 }

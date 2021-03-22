@@ -1,5 +1,10 @@
 @font-face { font-family: Roadbrush; src: url('fonts/KTF-Roadbrush.ttf'); }
 @font-face { font-family: Odin; src: url('fonts/Odin Rounded - Regular.otf'); }
+
+@font-face { 
+    font-family: AristaPro-Fat; 
+    src: url('fonts/Arista\ Light.ttf'); 
+}
 html{
     background: black;
     cursor: url("../assets/tela/apontador_seta.png"), auto;
@@ -15,10 +20,15 @@ html{
     height: 100%;
     z-index: 4;
 }
+#texto{
+    font-family: 'AristaPro-Fat', sans-serif !important;
+    letter-spacing: 1px;
+}
 #caixa_texto{
     width: 67%;
     right: 0%;
     bottom: 0;
+    font-family: 'AristaPro-Fat', sans-serif !important;
     position: absolute;
     background-image: url(../assets/dialogo.png);
     background-repeat: no-repeat;
@@ -43,10 +53,10 @@ html{
     right: 3%;
     bottom: 16%;
     position: absolute;
-    background: url("../assets/next.png");
+    /*background: url("../assets/next.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position-y: bottom;
+    background-position-y: bottom;*/
 }
 #texto{
     padding: 8%;
