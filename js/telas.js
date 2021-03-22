@@ -12,7 +12,7 @@ function mudarTela(tela){
     tela_atual = tela;
     muda_comunicacao('inicio');
     switch(tela){
-        case 'home':
+        case 'floresta':
             $("#voltar_btn").hide();
             sairJogos();
             //proxima_fala();
@@ -48,7 +48,7 @@ $("#como_jogar_btn").click(function(){
     mudarTela('como_jogar');
 });
 $("#jogar_btn").click(function(){
-    mudarTela('home');
+    mudarTela('floresta');
 });
 
 
@@ -78,13 +78,13 @@ $("#voltar_btn").click(function(){
             $("#sede_menu").show();
             info_animal = false;
         }else{
-            mudarTela('home');
+            mudarTela('floresta');
         }
     }else if(tela_atual == 'info' || tela_atual == 'como_jogar'){
         mudarTela('inicio');
     }else{
         $("#main_div").attr('class','');
-        mudarTela('home');
+        mudarTela('floresta');
     }
     $("#comunica").hide();
 });

@@ -87,7 +87,7 @@
 .como_jogar{
     background-image: url("../assets/tela/info.png") !important;
 }
-.home{
+.floresta{
     background-image: url("../images/main.jpeg") !important;
 }
 .trafico_animais{
@@ -145,6 +145,6 @@
     background-image: url("../assets/tela/sede.png") !important;
 }
 
-#voltar_btn, #queimadas_resgatar, #queimadas_apagar, #desmatamento, #poluicao, #trafico_animais, #home{
+#voltar_btn, #queimadas_resgatar, #queimadas_apagar, #desmatamento, #poluicao, #trafico_animais, #floresta{
     display: none;
 }

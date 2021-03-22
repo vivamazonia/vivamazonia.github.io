@@ -1,5 +1,5 @@
 var falas = {
-    "home" : {
+    "floresta" : {
         "inicio" : [
             "Clique no local para interagir!"
         ],
@@ -103,7 +103,7 @@ function proxima_fala(){
     if(max_index == index){
         $("#comunica").hide();
         switch(tela_atual){
-            case 'home':
+            case 'floresta':
 
             break;
             case 'queimadas_resgatar':
@@ -138,7 +138,7 @@ function proxima_fala(){
                         iniciarQueimadas();
                     break;
                     case "vitoria":
-                        mudarTela('home');
+                        mudarTela('floresta');
                     break;
                     case "derrota":
                         iniciarQueimadas();
@@ -167,7 +167,7 @@ function proxima_fala(){
                     break;
                     case "resgatado_peixe_boi":
                         $("#main_div").attr('class','');
-                        mudarTela('home');
+                        mudarTela('floresta');
                     break;
                     case "encontrado":
                         reiniciarTraficoAnimais();
