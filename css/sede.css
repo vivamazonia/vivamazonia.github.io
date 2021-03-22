@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
-    background-color:darkslateblue;
+    background-color:green;
 }
 
 #sede_onça{
@@ -23,12 +23,14 @@
 
 #sede_harpia{
     background-image: url("../assets/animais/harpia.png");
+    background-size: 130% !important;
     grid-area: harpia;
 }
 
 #sede_tucano{
     background-image: url("../assets/animais/tucano.png");
     grid-area: tucano;
+    background-size: 70% !important;
 }
 #sede_anta{
     background-image: url("../assets/animais/anta.png");

@@ -1,6 +1,24 @@
 var tela_atual = 'inicio';
 var comunicacao_parte = 'inicio';
 var primeira_vez_floresta = true;
+
+function mudaHumorJulia(humor){
+    switch(humor){
+        case 'normal':
+            $("#comunica_personagem").css('background-image','url(assets/julia1.png)');
+            $("#comunica_personagem").css('background-size','100%');
+            break;
+        case 'triste':
+            $("#comunica_personagem").css('background-image','url(assets/julia2.png)');
+            $("#comunica_personagem").css('background-size','94%');
+        break;
+        case 'feliz':
+            $("#comunica_personagem").css('background-image','url(assets/julia3.png)');
+            $("#comunica_personagem").css('background-size','100%');
+            break;
+    }
+}
+
 function mudarTela(tela){
     console.log(tela_atual);
     $("#voltar_btn").show();
@@ -23,15 +41,24 @@ function mudarTela(tela){
 
         break;
         case 'trafico_animais':
+            mudaHumorJulia('triste');
             proxima_fala();
         break;
         case 'queimadas_resgatar':
+            mudaHumorJulia('triste');
             proxima_fala();
         break;
         case 'queimadas_apagar':
+            mudaHumorJulia('normal');
             proxima_fala();
         break;
         case 'poluicao':
+            mudaHumorJulia('triste');
+            proxima_fala();
+        break;
+        case 'desmatamento':
+            mudaHumorJulia('triste');
+            muda_comunicacao('inicio_triste');
             proxima_fala();
         break;
         case 'sede':

@@ -12,11 +12,12 @@ var falas = {
     },
     "queimadas_apagar" : {
         "inicio" : [
-            "Agora vamos apagar"
+            "Clique com o mouse nas árvores queimando o mais rápido que puder para apagar o fogo.",
+            "Atenção o fogo está se espalhando muito rápido! Temos que ser mais rápidos!"
         ],
         "vitoria" : [
             "Conseguimos controlar o incêndio!",
-            "Vamos procurar outra atividade agora!"
+            "Temos outras áreas para ajudar! Vamos lá!"
         ],
         "derrota" : [
             "Não conseguimos controlar o incêndio!",
@@ -42,7 +43,7 @@ var falas = {
             "Se você achar clique que vamos resgatar"
         ],
         "encontrado_aves" : [
-            "Muito bem! Resgatamos a Harpia e o Tucano!",
+            "Muito bem! Resgatamos a harpia e o tucano!",
             "Eles serão levados para a nossa sede para serem tratados e depois denvolvidos para um ambiente seguro.",
             "Você pode visitá-los e saber mais sobre clicando na nossa sede"
         ],
@@ -51,7 +52,7 @@ var falas = {
             "Se você achar clique que vamos resgatar"
         ],
         "encontrado_anta" : [
-            "Muito bem! Resgatamos a Anta!",
+            "Muito bem! Resgatamos a anta!",
             "Ela será levada para a nossa sede para ser tratada e depois denvolvida para um ambiente seguro.",
             "Você pode visitá-la e saber mais sobre clicando na nossa sede.",
             "Agora vamos apagar todo esse fogo!"
@@ -59,44 +60,107 @@ var falas = {
     },
     "poluicao" : {
         "inicio" : [
-            "Vamos limpar"
+            "Nossa! Olha como o rio está poluído!",
+            "Tome essa rede. Limpe o rio clicando no lixo e depois na lixeira correta com o mouse."
+        ],
+        "errou" : [
+            "Você errou, esse lixo não vai para essa lixeira. Tente novamente."
+        ],
+        "fim" : [
+            "Muito bem! Esse rio está mais bonito agora!",
+            "Temos outras áreas para ajudar! Vamos lá!"
         ]
     },
     "trafico_animais" : {
         "inicio" : [
-            "Vamos salvar!"
+            "Olha que maldade fizeram com esses animaizinhos...",
+            "Eles estão sendo caçados ilegalmente!",
+            "Ajude os animais libertando-os das jaulas colocando o ponteiro do mouse em cima da jaula",
+            "Mas cuidado! Não deixe que ninguém veja você, quando a lanterna aparecer tire o ponteiro o mais rápido",
+            "A lanterna mais clara ainda é seguro, mas se a mais forte aparecer você será encontrado."
         ],
         "resgate_boto" : [
-            "Boto"
+            "Vamos começar resgatando esse boto.",
+            "Ele está mais perto e será mais fácil"
         ],
         "resgatado_boto" : [
-            "Boto resgatado"
+            "Regatamos o boto!"
         ],
         "resgate_pirarucu" : [
-            "Pirarucu"
+            "Agora é a vez do pirarucu.",
+            "Ele está mais um pouco mais longe e será mais complicado"
         ],
         "resgatado_pirarucu" : [
-            "Pirarurcu resgatado"
+            "Resgatamos o pirarucu!"
         ],
         "resgate_peixe_boi" : [
-            "Peixe boi"
+            "Agora vamos resgatar esse peixe boi.",
+            "Ele está mais longe e será mais díficil. Eles estão bem atentos!"
         ],
         "resgatado_peixe_boi" : [
-            "Peixe boi resgatado"
+            "Resgatamos o peixe boi!",
+            "Temos outras áreas para ajudar! Vamos lá!"
         ],
         "encontrado" : [
-            "Fomos encontrados!"
+            "Fomos encontrados! Temos que fugir daqui e tentar novamente mais tarde!"
         ]
     },
     "desmatamento" : {
-        "inicio" : [
-            "Replantar!"
+        "inicio_triste" : [
+            "Essa área desmatada já foi uma linda floresta..."
         ],
+        "inicio" : [
+            "Vamos plantar algumas árvores!",
+            "Primeiro vamos usar a pá para remover esse tronco que não pode ser recuperado.",
+            "Depois vamos usar a enxada para arar a terra para plantar a muda",
+            "Em seguida, vamos colocar a muda na terra arada",
+            "Por fim, vamos regar a esperar nossa floresta renascer!",
+            "Pegue a pá clicando com o mouse!"
+        ],
+        "pa" : [
+            "Agora clique nos troncos para removê-los",
+            "Você tem que tirar o tronco primeiro para depois usar outra ferramenta",
+            "Você pode fazer todos de uma vez ou um por um, você que escolhe"
+        ],
+        "enxada" : [
+            "Agora clique nos buracos para arar a terra",
+            "Você precisa ter usado a pá para remover primeiro"
+        ],
+        "muda" : [
+            "Agora clique na terra arada para plantar a muda",
+            "Você precisa ter usado a enxada para arar a terra primeiro"
+        ],
+        "regador" : [
+            "Ótimo! Agora vamos regar a muda!",
+            "Você precisa ter colocado a muda na terra arada primeiro"
+        ],
+        "errado" : [
+            "Você não seguiu a sequência!",
+            "Primeiro vamos usar a pá para remover esse tronco que não pode ser recuperado.",
+            "Depois vamos usar a enxada para arar a terra para plantar a muda",
+            "Em seguida, vamos colocar a muda na terra arada",
+            "Por fim, vamos regar a esperar nossa floresta renascer!"
+        ],
+        "fim" : [
+            "Muito bem! Nossa floresta será linda novamente em breve",
+            "Temos outras áreas para ajudar! Vamos lá!"
+        ]
     },
     "greenpeace" : {
         "inicio" : [
-            "Venha conhecer!"
+            "Essa é nossa sede! É aqui que os animais resgatados ficam enquanto estão em tratamento médico",
+            "Assim que eles estiverem melhor vamos devolvê-los para a floresta em um local seguro"
         ],
+        "nao_terminou_fases" : [
+            "Você ainda não ajudou todas as áreas da floresta. Vá em todas e você receberá um crachá do Greenpeace Fortaleza!"
+        ],
+        "terminou_fases" : [
+            "Você ajudou todas as áreas da floresta!Aqui está seu crachá do Greenpeace Fortaleza!"
+        ],
+        "saber_mais" : [            
+            "Já que você está aqui não gostaria de ver como os animais que resgatamos estão?",
+            "Clique no animal com o mouse e te conto mais sobre ele"
+        ]
     }
 }
 var index = -1;
@@ -134,6 +198,7 @@ function proxima_fala(){
                     break;
                     case "encontrado_anta":
                         animais_resgatados = true;
+                        mudaHumorJulia('normal');
                         mudarTela('queimadas_apagar');
                     break;
                 }
@@ -160,12 +225,14 @@ function proxima_fala(){
                         iniciarTraficoAnimais('boto');
                     break;
                     case "resgatado_boto":
+                        mudaHumorJulia('normal');
                         resgate_pirarucu();
                     break;
                     case "resgate_pirarucu":
                         iniciarTraficoAnimais('pirarucu');
                     break;
                     case "resgatado_pirarucu":
+                        mudaHumorJulia('normal');
                         resgate_peixe_boi();
                     break;
                     case "resgate_peixe_boi":
@@ -181,10 +248,30 @@ function proxima_fala(){
                 }
             break;
             case 'desmatamento':
+                switch(comunicacao_parte){
+                    case 'inicio_triste':
+                        muda_comunicacao('inicio');
+                        mudaHumorJulia('normal');
+                        proxima_fala();
+                    break;
+                    case 'fim':
+                        mudarTela('floresta');
+                    break;
+                }
                 iniciarDesmatamento();
             break;
             case 'poluicao':
-                iniciarPoluicao();
+                switch(comunicacao_parte){
+                    case 'inicio':
+                        iniciarPoluicao();
+                    break;
+                    case 'errou':
+                        continuar();
+                    break;
+                    case 'fim':
+                        mudarTela('floresta');
+                    break;
+                }
             break;
         }
     }

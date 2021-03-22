@@ -6,17 +6,20 @@ function resgate_onça(){
     proxima_fala();
 }
 function resgate_aves(){
+    mudaHumorJulia('triste');
     $("#main_div").addClass('queimadas_resgatar_aves');
     muda_comunicacao('aves');
     proxima_fala();
 }
 function resgate_anta(){
+    mudaHumorJulia('triste');
     $("#main_div").addClass('queimadas_resgatar_anta');
     muda_comunicacao('anta');
     proxima_fala();
 }
 
 function vitoria_queimada(){
+    mudaHumorJulia('feliz');
     muda_comunicacao('vitoria');
     fogo_apagado = true;
     clearInterval(intervalID);
@@ -24,6 +27,7 @@ function vitoria_queimada(){
 }
 
 function derrota_queimada(){
+    mudaHumorJulia('triste');
     muda_comunicacao('derrota');
     clearInterval(intervalID);
     proxima_fala();
@@ -92,6 +96,7 @@ function pintarAleatorio(inicio){
 }
 
 $("#queimadas_resgatar_onça").click(function(){
+    mudaHumorJulia('feliz');
     $("#main_div").removeClass('queimadas_resgatar_onça');
     $("#queimadas_resgatar_onça").hide();
     muda_comunicacao('encontrado_onça');
@@ -104,6 +109,7 @@ $("#queimadas_resgatar_harpia").click(function(){
     $("#queimadas_resgatar_harpia").hide();
     if(tucano_encontrado && harpia_encontrada){
         $("#main_div").removeClass('queimadas_resgatar_aves');
+        mudaHumorJulia('feliz');
         muda_comunicacao('encontrado_aves');
         proxima_fala();
     }
@@ -112,6 +118,7 @@ $("#queimadas_resgatar_tucano").click(function(){
     tucano_encontrado = true;
     $("#queimadas_resgatar_tucano").hide();
     if(tucano_encontrado && harpia_encontrada){
+        mudaHumorJulia('feliz');
         $("#main_div").removeClass('queimadas_resgatar_aves');
         muda_comunicacao('encontrado_aves');
         proxima_fala();
@@ -119,6 +126,7 @@ $("#queimadas_resgatar_tucano").click(function(){
 });
 
 $("#queimadas_resgatar_anta").click(function(){
+    mudaHumorJulia('feliz');
     $("#main_div").removeClass('queimadas_resgatar_anta');
     $("#queimadas_resgatar_anta").hide();
     muda_comunicacao('encontrado_anta');

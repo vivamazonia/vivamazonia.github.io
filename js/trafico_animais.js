@@ -11,6 +11,7 @@ var controle_luz = true;
 var animal_resgate = '';
 
 function salvar_animal(){
+    mudaHumorJulia('feliz');
     muda_comunicacao('resgatado_'+animal_resgate);
     clearInterval(id_trabalha);
     clearInterval(id_luz);
@@ -19,6 +20,7 @@ function salvar_animal(){
 
 function encontrado(){
     muda_comunicacao('encontrado');
+    mudaHumorJulia('triste');
     trabalhando = false;
     clearInterval(id_trabalha);
     clearInterval(id_luz);
