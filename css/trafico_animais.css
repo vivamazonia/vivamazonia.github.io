@@ -1,22 +1,8 @@
-#trafico_animais_escondido{
-    height: 58%;
-    width: 30%;
-    background: red;
-    position: absolute;
-    left: 11.9%;
-}
 #trafico_animais_salvando{
     height: 100%;
     width: 50%;
     position: absolute;
     left: 40%;
-}
-#trafico_animais_guarda{
-    height: 10%;
-    width: 5%;
-    background: green;
-    position: absolute;
-    left: 77.5%;
 }
 #trafico_animais_porcentagem{
     width: 200px;
@@ -26,20 +12,56 @@
     top: 87.5%;
 }
 #trafico_animais_jaula{
-    width: 350px;
-    height: 350px;
-    background: gray;
+    width: 42%;
+    height: 51%;
     position: absolute;
     top: 20%;
-    left: 45%;
+    left: 33%;
     font-size: 30px;
-    color: red;
+    color: #ff9100;
 }
-#trafico_animais_inicio_jaula, #trafico_animais_fim_jaula, #trafico_animais_inicio_salvando, #trafico_animais_fim_salvando{
+#trafico_animais_inicio_jaula, #trafico_animais_fim_jaula{
     width: 1px;
     height: 1px;
+    position: absolute;
 }
-#trafico_animais_fim_jaula, #trafico_animais_fim_salvando{
-    float: right;
-    margin-top: 88%;
+#trafico_animais_inicio_jaula{
+    left: 0;
+    top: 0;
+}
+#trafico_animais_fim_jaula{
+    right: 0;
+    bottom: 0;
+}
+
+#luz1, #luz2{
+    position: absolute;
+    right: 0;
+    width: 77%;
+    height: 36%;
+    z-index: 1000;
+}
+#luz1 {
+    transform: skew(0deg, 10deg);
+    top: 22%;
+}
+#luz2 {
+    transform: skew(0deg, -10deg);
+    top: 40%;
+}
+#lanterna{
+    display: block;
+}
+
+#ident1, #ident2{
+    width:1px;
+    height: 1px;
+    position: absolute;
+    display: none;
+}
+
+#trafico_animais_inicio_jaula, #trafico_animais_fim_jaula{
+    width: 1px;
+    height: 1px;
+    position: absolute;
 }

@@ -17,7 +17,6 @@
     width: 7%;
     height: 13%;
     bottom: 23%;
-    border: blueviolet 1px solid;
 }
 #info_btn{
     left: 5%;
@@ -91,8 +90,35 @@
 .home{
     background-image: url("../images/main.jpeg") !important;
 }
-.trafico{
-    background-image: url("../assets/tela/trafico_escolha.png") !important;
+.trafico_animais{
+    background-image: url("../assets/resgate/salvamento\ boto1.png") !important;
+}
+.trafico_boto_seguro{
+    background-image: url("../assets/resgate/salvamento\ boto1.png") !important;
+}
+.trafico_boto_aproximando{
+    background-image: url("../assets/resgate/salvamento\ boto2.png") !important;
+}
+.trafico_boto_perigo{
+    background-image: url("../assets/resgate/salvamento\ boto3.png") !important;
+}
+.trafico_pirarucu_seguro{
+    background-image: url("../assets/resgate/salvamento\ pirarucu1.png") !important;
+}
+.trafico_pirarucu_aproximando{
+    background-image: url("../assets/resgate/salvamento\ pirarucu2.png") !important;
+}
+.trafico_pirarucu_perigo{
+    background-image: url("../assets/resgate/salvamento\ pirarucu3.png") !important;
+}
+.trafico_peixe_boi_seguro{
+    background-image: url("../assets/resgate/salvamento\ peixe_boi1.png") !important;
+}
+.trafico_peixe_boi_aproximando{
+    background-image: url("../assets/resgate/salvamento\ peixe_boi2.png") !important;
+}
+.trafico_peixe_boi_perigo{
+    background-image: url("../assets/resgate/salvamento\ peixe_boi3.png") !important;
 }
 .desmatamento{
     background-image: url("../images/main.jpeg") !important;
@@ -116,7 +142,7 @@
     background-image: url("../assets/tela/rio.png") !important;
 }
 .sede{
-    background-image: url("../images/main.jpeg") !important;
+    background-image: url("../assets/tela/sede.png") !important;
 }
 
 #voltar_btn, #queimadas_resgatar, #queimadas_apagar, #desmatamento, #poluicao, #trafico_animais, #home{

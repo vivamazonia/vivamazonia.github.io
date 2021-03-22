@@ -3,7 +3,7 @@ var timeouts = [];
 var itens = [];
 function iniciarPoluicao(){
     $("#poluicao").show();
-    $('html').css("cursor",'url("assets/lixo/rede.png"), auto');
+    $('html').css("cursor",'url("assets/lixo/rede.png") 50 0, auto');
     console.log($('html').css("cursor"));
     for(var i = 0; i < 10; i++){
         timeouts[i] = setTimeout(function (){criarItem(Math.floor(Math.random() * 2)+1) },2000*i);
@@ -24,7 +24,7 @@ function jogarLixo(lixeira){
         if($("html").css('cursor').includes(lixeira)){
             $(lixoAtual).remove();
             lixoAtual = null;
-            $('html').css("cursor",'url("assets/lixo/rede.png"), auto');
+            $('html').css("cursor",'url("assets/lixo/rede.png") 50 0, auto');
         }else{
             //alert('errou tenta denovo');
         }
@@ -62,16 +62,16 @@ function criarItem(esteira){
             lixoAtual = item;
             switch(item.className){
                 case 'poluicao_item plastico':
-                    $('html').css("cursor",'url("assets/lixo/rede_plastico.png"), auto');
+                    $('html').css("cursor",'url("assets/lixo/rede_plastico.png") 50 0, auto');
                 break;
                 case 'poluicao_item papel':
-                    $('html').css("cursor",'url("assets/lixo/rede_papel.png"), auto');
+                    $('html').css("cursor",'url("assets/lixo/rede_papel.png") 50 0, auto');
                 break;
                 case 'poluicao_item metal':
-                    $('html').css("cursor",'url("assets/lixo/rede_metal.png"), auto');
+                    $('html').css("cursor",'url("assets/lixo/rede_metal.png") 50 0, auto');
                 break;
                 case 'poluicao_item vidro':
-                    $('html').css("cursor",'url("assets/lixo/rede_vidro.png"), auto');
+                    $('html').css("cursor",'url("assets/lixo/rede_vidro.png") 50 0, auto');
                 break;
             }
             

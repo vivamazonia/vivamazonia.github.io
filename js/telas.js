@@ -1,11 +1,14 @@
 var tela_atual = 'inicio';
 var comunicacao_parte = 'inicio';
 function mudarTela(tela){
+    console.log(tela_atual);
     $("#voltar_btn").show();
     $("#main_div").removeClass(tela_atual);
     $("#main_div").addClass(tela);
     $("#"+tela_atual).hide();
     $("#"+tela).show();    
+    $("#comunica").hide();
+    $("html").css("cursor","default");
     tela_atual = tela;
     muda_comunicacao('inicio');
     switch(tela){
@@ -17,6 +20,9 @@ function mudarTela(tela){
         case 'inicio':
             $("#voltar_btn").hide();
 
+        break;
+        case 'trafico_animais':
+            proxima_fala();
         break;
         case 'queimadas_resgatar':
             proxima_fala();
@@ -57,7 +63,7 @@ $("#lago_btn").click(function(){
     mudarTela('poluicao');
 });
 $("#animais_btn").click(function(){
-    mudarTela('trafico');
+    mudarTela('trafico_animais');
 });
 $("#reflorestamento_btn").click(function(){
     mudarTela('desmatamento');
@@ -77,6 +83,7 @@ $("#voltar_btn").click(function(){
     }else if(tela_atual == 'info' || tela_atual == 'como_jogar'){
         mudarTela('inicio');
     }else{
+        $("#main_div").attr('class','');
         mudarTela('home');
     }
     $("#comunica").hide();

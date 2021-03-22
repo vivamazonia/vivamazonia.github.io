@@ -56,10 +56,31 @@ var falas = {
             "Vamos limpar"
         ]
     },
-    "trafico" : {
+    "trafico_animais" : {
         "inicio" : [
             "Vamos salvar!"
         ],
+        "resgate_boto" : [
+            "Boto"
+        ],
+        "resgatado_boto" : [
+            "Boto resgatado"
+        ],
+        "resgate_pirarucu" : [
+            "Pirarucu"
+        ],
+        "resgatado_pirarucu" : [
+            "Pirarurcu resgatado"
+        ],
+        "resgate_peixe_boi" : [
+            "Peixe boi"
+        ],
+        "resgatado_peixe_boi" : [
+            "Peixe boi resgatado"
+        ],
+        "encontrado" : [
+            "Fomos encontrados!"
+        ]
     },
     "desmatamento" : {
         "inicio" : [
@@ -124,8 +145,34 @@ function proxima_fala(){
                     break;
                 }
             break;
-            case 'trafico':
-                iniciarTraficoAnimais();
+            case 'trafico_animais':
+                switch(comunicacao_parte){
+                    case "inicio":
+                        resgate_boto();
+                    break;
+                    case "resgate_boto":
+                        iniciarTraficoAnimais('boto');
+                    break;
+                    case "resgatado_boto":
+                        resgate_pirarucu();
+                    break;
+                    case "resgate_pirarucu":
+                        iniciarTraficoAnimais('pirarucu');
+                    break;
+                    case "resgatado_pirarucu":
+                        resgate_peixe_boi();
+                    break;
+                    case "resgate_peixe_boi":
+                        iniciarTraficoAnimais('peixe_boi');
+                    break;
+                    case "resgatado_peixe_boi":
+                        $("#main_div").attr('class','');
+                        mudarTela('home');
+                    break;
+                    case "encontrado":
+                        reiniciarTraficoAnimais();
+                    break;
+                }
             break;
             case 'desmatamento':
                 iniciarDesmatamento();
