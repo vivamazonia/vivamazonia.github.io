@@ -11,6 +11,7 @@
     top: 4%;
     background-size: 100%;
     background-repeat: no-repeat;
+    cursor: url("../assets/tela/apontador_seta.png"), auto;
 }
 
 /*Tela inicial*/
@@ -42,42 +43,41 @@
 }
 #floresta_btn, #animais_btn, #reflorestamento_btn, #lago_btn, #sede_btn{
     position: absolute;
-    opacity: 30%;
+}
+#floresta_btn img:hover, #animais_btn img:hover, #reflorestamento_btn img:hover, #lago_btn img:hover, #sede_btn img:hover{
+     
+  -webkit-filter: drop-shadow(20px 20px 20px #222);
+  filter: drop-shadow(20px 20px 20px #222);
 }
 #floresta_btn{
     width: 26%;
     height: 40%;
-    left: 0;
-    top: 0;
-    background: red;
+    left: 3%;
+    top: 10%;
 }
 #animais_btn{
     width: 17%;
     height: 22%;
-    left: 11%;
-    bottom: 13%;
-    background: orangered;
+    left: 10%;
+    bottom: 22%;
 }
 #reflorestamento_btn{
     width: 24%;
     height: 31%;
-    left: 37%;
-    bottom: 0;
-    background: blueviolet;
+    left: 41%;
+    bottom: 2%;
 }
 #lago_btn{
     width: 31%;
     height: 50%;
-    bottom: 0;
-    right: 0;
-    background: blue;
+    bottom: 20%;
+    right: 4%;
 }
 #sede_btn{
     width: 26%;
     height: 44%;
     left: 36%;
-    top: 22%;
-    background: green;
+    top: 19%;
 }
 
 
@@ -91,7 +91,7 @@
     background-image: url("../assets/tela/como_joga.png") !important;
 }
 .floresta{
-    background-image: url("../images/main.jpeg") !important;
+    background-image: url("../assets/tela/floresta.png") !important;
 }
 .trafico_animais{
     background-image: url("../assets/resgate/salvamento\ boto1.png") !important;

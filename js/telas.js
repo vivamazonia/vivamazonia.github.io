@@ -43,7 +43,7 @@ function mudarTela(tela){
     $("#"+tela_atual).hide();
     $("#"+tela).show();    
     $("#comunica").hide();
-    $("html").css("cursor",'url("../assets/tela/apontador_seta.png"), auto');
+    $('#main_div').css("cursor",'url("assets/tela/apontador_seta.png"), auto');
     tela_atual = tela;
     muda_comunicacao('inicio');
     switch(tela){
@@ -130,6 +130,8 @@ $("#voltar_btn").click(function(){
         sair_trafico_animais();
         $("#main_div").attr('class','');
         mudarTela('floresta');
+    }else if(tela_atual == 'trafico_animais'){
+        sair_fase_poluicao();
     }else{
         $("#main_div").attr('class','');
         mudarTela('floresta');

@@ -9,8 +9,19 @@ var id_repete_lixos;
 /* Função para iniciar o jogo */
 function comeca_fase_poluicao(){
     $("#poluicao").show();
-    $('html').css("cursor",'url("assets/lixo/rede.png") 50 0, auto');
+    $('#main_div').css("cursor",'url("assets/lixo/rede.png") 50 0, auto');
     loop_lixos();
+}
+
+/* Função para finalizar a fase ou voltar */
+function sair_fase_poluicao(){
+    loop_lixos_pausado = true;
+    clearInterval(id_repete_lixos);
+    $("#poluicao").hide();
+    $('#main_div').css("cursor",'url("../assets/tela/apontador_seta.png"), auto');
+    for(var i = 0; i < lixos.length; i++){
+        $(lixos[i]).remove();
+    }
 }
 
 /* Função para selecionar aleatoriamente o tipo do lixo */
@@ -23,17 +34,6 @@ function obter_lixo_aleatorio(){
         case 3: lixeira = 'vidro';    break;
     }
     return lixeira;
-}
-
-/* Função para finalizar a fase ou voltar */
-function sair_fase_poluicao(){
-    loop_lixos_pausado = true;
-    clearInterval(id_repete_lixos);
-    $("#poluicao").hide();
-    $('html').css("cursor",'url("../assets/tela/apontador_seta.png"), auto');
-    for(var i = 0; i < lixos.length; i++){
-        $(lixos[i]).remove();
-    }
 }
 
 /* Função para o loop de criação dos lixos */
@@ -64,16 +64,16 @@ function seleciona_lixo(item){
         lixo_selecionado = item;
         switch(item.className){
             case 'poluicao_item plastico':
-                $('html').css("cursor",'url("assets/lixo/rede_plastico.png") 50 0, auto');
+                $('#main_div').css("cursor",'url("assets/lixo/rede_plastico.png") 50 0, auto');
             break;
             case 'poluicao_item papel':
-                $('html').css("cursor",'url("assets/lixo/rede_papel.png") 50 0, auto');
+                $('#main_div').css("cursor",'url("assets/lixo/rede_papel.png") 50 0, auto');
             break;
             case 'poluicao_item metal':
-                $('html').css("cursor",'url("assets/lixo/rede_metal.png") 50 0, auto');
+                $('#main_div').css("cursor",'url("assets/lixo/rede_metal.png") 50 0, auto');
             break;
             case 'poluicao_item vidro':
-                $('html').css("cursor",'url("assets/lixo/rede_vidro.png") 50 0, auto');
+                $('#main_div').css("cursor",'url("assets/lixo/rede_vidro.png") 50 0, auto');
             break;
         }
         
@@ -85,6 +85,20 @@ function lixo_local_errado(){
     mudaHumorJulia('triste');
     muda_comunicacao('errou');
     proxima_fala();
+}
+
+/* Funcção para definição das ações quando o lixo vai para a lixeira correta */
+function lixo_local_certo(){
+    $(lixo_selecionado).remove();
+    lixo_selecionado = null;
+    $('#main_div').css("cursor",'url("assets/lixo/rede.png") 50 0, auto');
+    contador_acertos++;
+    //Se a quantidade de acertos for igual ao máximo o jogo acaba
+    if(contador_acertos == quantidade_lixos){
+        mudaHumorJulia('feliz');
+        muda_comunicacao('fim');
+        proxima_fala();
+    }
 }
 
 /* Função para pausar as animações e criação dos lixos */
@@ -109,16 +123,8 @@ function retomar_loop_lixos(){
 
 $("#poluicao_lixeiras > div").click(function(){
     if(lixo_selecionado != null){
-        if($("html").css('cursor').includes(this.className)){
-            $(lixo_selecionado).remove();
-            lixo_selecionado = null;
-            $('html').css("cursor",'url("assets/lixo/rede.png") 50 0, auto');
-            contador_acertos++;
-            if(contador_acertos == quantidade_lixos){
-                mudaHumorJulia('feliz');
-                muda_comunicacao('fim');
-                proxima_fala();
-            }
+        if($("#main_div").css('cursor').includes(this.className)){
+            lixo_local_certo();
         }else{
             pausar_loop_lixos();
             lixo_local_errado();

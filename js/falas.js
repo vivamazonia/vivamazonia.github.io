@@ -2,12 +2,12 @@ var falas = {
     "floresta" : {
         "inicio" : [
             "Oi amigo! Eu sou a Júlia, voluntária do Greenpeace Fortaleza.",
-            "Você conhece a Amazônia? Ela é a maior floresta tropical do mundo!",
+            /*"Você conhece a Amazônia? Ela é a maior floresta tropical do mundo!",
             "Infelizmente ela está sendo destruída aos pouquinhos...",
             "Nós não podemos deixar que isso aconteça!",
             "Que tal você me ajudar a preservar a nossa linda floresta?",
             "Vem comigo, vou te ensinar como podemos ajudar a preservar a Floresta Amazônica.",
-            "Clique em uma das áreas no mapa"
+            "Clique em uma das áreas no mapa"*/
         ],
     },
     "queimadas_apagar" : {
@@ -269,10 +269,10 @@ function proxima_fala(){
             case 'poluicao':
                 switch(comunicacao_parte){
                     case 'inicio':
-                        iniciarPoluicao();
+                        comeca_fase_poluicao();
                     break;
                     case 'errou':
-                        continuar();
+                        retomar_loop_lixos();
                     break;
                     case 'fim':
                         mudarTela('floresta');
