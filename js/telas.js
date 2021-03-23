@@ -9,14 +9,14 @@ var tela_desmatamento = false;
 var tela_poluicao = false;
 
 
-var animal_onca = true;
-var animal_harpia = true;
-var animal_tucano = true;
-var animal_anta = true;
-var animal_boto = true;
-var animal_jacaretinga = true;
-var animal_peixe_boi = true;
-var animal_pirarucu = true;
+var animal_onca = false;
+var animal_harpia = false;
+var animal_tucano = false;
+var animal_anta = false;
+var animal_boto = false;
+var animal_jacaretinga = false;
+var animal_peixe_boi = false;
+var animal_pirarucu = false;
 
 function mudaHumorJulia(humor){
     switch(humor){
@@ -48,7 +48,6 @@ function mudarTela(tela){
     muda_comunicacao('inicio');
     switch(tela){
         case 'floresta':
-            $("#voltar_btn").hide();
             if(primeira_vez_floresta){ proxima_fala(); primeira_vez_floresta = false};
             sairJogos();
         break;
@@ -132,6 +131,9 @@ $("#voltar_btn").click(function(){
         mudarTela('floresta');
     }else if(tela_atual == 'trafico_animais'){
         sair_fase_poluicao();
+    }else if(tela_atual == 'floresta'){
+        $("#main_div").attr('class','');
+        mudarTela('inicio');
     }else{
         $("#main_div").attr('class','');
         mudarTela('floresta');

@@ -94,7 +94,7 @@
     background-image: url("../assets/tela/floresta.png") !important;
 }
 .trafico_animais{
-    background-image: url("../assets/resgate/salvamento\ boto1.png") !important;
+    background-image: url("../assets/resgate/salvamento\ jacaretinga1.png") !important;
 }
 .trafico_boto_seguro{
     background-image: url("../assets/resgate/salvamento\ boto1.png") !important;
@@ -104,6 +104,15 @@
 }
 .trafico_boto_perigo{
     background-image: url("../assets/resgate/salvamento\ boto3.png") !important;
+}
+.trafico_jacaretinga_seguro{
+    background-image: url("../assets/resgate/salvamento\ jacaretinga1.png") !important;
+}
+.trafico_jacaretinga_aproximando{
+    background-image: url("../assets/resgate/salvamento\ jacaretinga2.png") !important;
+}
+.trafico_jacaretinga_perigo{
+    background-image: url("../assets/resgate/salvamento\ jacaretinga3.png") !important;
 }
 .trafico_pirarucu_seguro{
     background-image: url("../assets/resgate/salvamento\ pirarucu1.png") !important;
@@ -125,7 +134,6 @@
 }
 .desmatamento{
     background-image: url("../assets/tela/desmatamento.png") !important;
-    background-size: 100%;
 }
 .queimadas_resgatar{
     background-image: url("../assets/tela/queimadas_resgatar.png") !important;

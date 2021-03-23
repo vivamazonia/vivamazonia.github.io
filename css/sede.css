@@ -89,15 +89,19 @@
 .sede_info .imagens{
     display: flex;    
     position: absolute;
-    width: 91%;
+    width: 42%;
     height: 79%;
-    left: 6%;
+    left: 8%;
     top: 7%;
 }
-.sede_info .imagens .texto{
-    max-width: 40%;
+.sede_info .texto{
     font-size: 170%;
-    font-family: 'AristaPro-Fat', sans-serif !important;
+    top: 8%;
+    position: absolute;
+    width: 42%;
+    height: 79%;
+    right: 6%;
+    font-family: 'Arista', sans-serif !important;
     color: white;
 }
 
@@ -112,7 +116,7 @@
 }
 .sede_info .titulo{
     color: white;
-    margin-top: -6%;
+    margin-top: -3%;
     text-align: center;
     font-family: Roadbrush;
     position: absolute;

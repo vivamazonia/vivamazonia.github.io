@@ -43,7 +43,7 @@ function mudar(tipo){
             }
         break;
     }
-    $('html').css("cursor",'url("assets/desmatamento/'+tipo+'_mouse.png") 25 200, auto');
+    $('#main_div').css("cursor",'url("assets/desmatamento/'+tipo+'_mouse.png") 25 200, auto');
 }
 $(".planta_desmatamento").click(function(){
     console.log($(this).attr('class'));

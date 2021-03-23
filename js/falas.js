@@ -79,16 +79,23 @@ var falas = {
             "Mas cuidado! Não deixe que ninguém veja você, quando a lanterna aparecer tire o ponteiro o mais rápido",
             "A lanterna mais clara ainda é seguro, mas se a mais forte aparecer você será encontrado."
         ],
-        "resgate_boto" : [
-            "Vamos começar resgatando esse boto.",
+        "resgate_jacaretinga" : [
+            "Vamos começar resgatando esse jacaretinga.",
             "Ele está mais perto e será mais fácil"
+        ],
+        "resgatado_jacaretinga" : [
+            "Regatamos o jacaretinga!"
+        ],
+        "resgate_boto" : [
+            "Agora é a vez do boto.",
+            "Ele está um pouco mais longe e será mais complicado"
         ],
         "resgatado_boto" : [
             "Regatamos o boto!"
         ],
         "resgate_pirarucu" : [
             "Agora é a vez do pirarucu.",
-            "Ele está mais um pouco mais longe e será mais complicado"
+            "Ele está um pouco mais longe e será mais complicado"
         ],
         "resgatado_pirarucu" : [
             "Resgatamos o pirarucu!"
@@ -222,6 +229,10 @@ function proxima_fala(){
             case 'trafico_animais':
                 switch(comunicacao_parte){
                     case "inicio":
+                        iniciarTraficoAnimais('jacaretinga');
+                    break;
+                    case "resgatado_jacaretinga":
+                        mudaHumorJulia('normal');
                         resgate_boto();
                     break;
                     case "resgate_boto":

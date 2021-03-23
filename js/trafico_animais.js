@@ -16,7 +16,10 @@ function salvar_animal(){
     if(animal_resgate == 'boto'){
         animal_boto = true;
     }
-    if(animal_resgate == 'pirarurcu'){
+    if(animal_resgate == 'jacaretinga'){
+        animal_jacaretinga = true;
+    }
+    if(animal_resgate == 'pirarucu'){
         animal_pirarucu = true;
     }
     if(animal_resgate == 'peixe_boi'){
@@ -45,6 +48,12 @@ function encontrado(){
 }
 
 function reiniciarTraficoAnimais(){
+    posicaoAtual = {x:0, y:0};
+    $("#main_div").removeClass('trafico_'+animal_resgate+'_seguro');
+    $("#main_div").removeClass('trafico_'+animal_resgate+'_aproximando');
+    $("#main_div").removeClass('trafico_'+animal_resgate+'_perigo');
+    $("#main_div").addClass('trafico_'+animal_resgate+'_seguro');
+    $("#trafico_animais_carregando").html('0%');
     iniciarTraficoAnimais(animal_resgate);
 }
 
@@ -52,13 +61,16 @@ function iniciarTraficoAnimais(animal) {
     animal_resgate = animal;
     $("#trafico_animais_carregando").html('0%');
     $("#trafico_animais").show();
+    salvo = false;
     carrega = 0;
     var aproximando = 0;
     var tempo = 1;
-    if(animal == 'boto'){
+    if(animal == 'jacaretinga'){
         tempo = 2.5;
-    }else if(animal == 'pirarucu'){
+    }else if(animal == 'boto'){
         tempo = 2;
+    }else if(animal == 'pirarucu'){
+        tempo = 1.5;
     }
     trabalhando = false;
     id_luz = setInterval(frame, tempo*25);
@@ -108,7 +120,7 @@ function trabalha(tempo) {
         if(mexendo_jaula() && carrega < 1000){
             carrega+= tempo;
             $("#trafico_animais_carregando").html(Math.floor(carrega/10)+'%');
-            if(carrega == 1000 && !salvo){
+            if(carrega >= 1000 && !salvo){
                 salvar_animal();
             }
         }else{
@@ -143,18 +155,27 @@ $("#luz2").mouseout(function(e){
     posicaoAtual.y = e.pageY;
 });
 
+function resgate_jacaretinga(){
+    $("#main_div").addClass('trafico_jacaretinga_seguro');
+    $("#trafico_animais_carregando").html('0%');
+    muda_comunicacao('resgate_jacaretinga');
+    proxima_fala();
+}
 function resgate_boto(){
     $("#main_div").addClass('trafico_boto_seguro');
+    $("#trafico_animais_carregando").html('0%');
     muda_comunicacao('resgate_boto');
     proxima_fala();
 }
 function resgate_pirarucu(){
     $("#main_div").addClass('trafico_pirarucu_seguro');
+    $("#trafico_animais_carregando").html('0%');
     muda_comunicacao('resgate_pirarucu');
     proxima_fala();
 }
 function resgate_peixe_boi(){
     $("#main_div").addClass('trafico_peixe_boi_seguro');
+    $("#trafico_animais_carregando").html('0%');
     muda_comunicacao('resgate_peixe_boi');
     proxima_fala();
 }

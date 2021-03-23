@@ -1,10 +1,7 @@
 @font-face { font-family: Roadbrush; src: url('fonts/KTF-Roadbrush.ttf'); }
 @font-face { font-family: Odin; src: url('fonts/Odin Rounded - Regular.otf'); }
 
-@font-face { 
-    font-family: AristaPro-Fat; 
-    src: url('fonts/Arista\ Light.ttf'); 
-}
+@font-face { font-family: Arista; src: url('fonts/z-arista-light.ttf'); }
 html{
     background: black;
 }
@@ -20,14 +17,14 @@ html{
     cursor: url("../assets/tela/apontador_mão.png"), auto;
 }
 #texto{
-    font-family: 'AristaPro-Fat', sans-serif !important;
+    font-family: 'Arista', sans-serif !important;
     letter-spacing: 1px;
 }
 #caixa_texto{
     width: 67%;
     right: 0%;
     bottom: 0;
-    font-family: 'AristaPro-Fat', sans-serif !important;
+    font-family: 'Arista', sans-serif !important;
     position: absolute;
     background-image: url(../assets/dialogo.png);
     background-repeat: no-repeat;
