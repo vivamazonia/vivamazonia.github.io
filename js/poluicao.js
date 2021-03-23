@@ -3,8 +3,9 @@ var lixos = [];
 var loop_lixos_pausado = false;
 var contador_item = 0;
 var contador_acertos = 0;
-var quantidade_lixos = 3;
+var quantidade_lixos = 10;
 var id_repete_lixos;
+var tempo = 10000;
 
 /* Função para iniciar o jogo */
 function comeca_fase_poluicao(){
@@ -50,7 +51,7 @@ function loop_lixos(){
             item.className = "poluicao_item "+obter_lixo_aleatorio();
             $(item).click(function(){seleciona_lixo(item);});
             $("#poluicao_esteira"+esteira).append(item);
-            item.animacao = $(item).animate({left: '92%'},15000,function(){});
+            item.animacao = $(item).animate({left: '92%'},tempo,function(){});
             lixos.push(item);
         }
     }
@@ -111,12 +112,11 @@ function pausar_loop_lixos(){
 
 /* Função para retomar as animações e criação dos lixos */
 function retomar_loop_lixos(){
-    var duration = 15000;
     var tamanho = parseInt($("#main_div").css('width'));
     for(var i = 0; i < lixos.length; i++){
         var cur = parseInt($(lixos[i]).css('left'));
         if(lixo_selecionado != lixos[i])
-            lixos[i].animacao = $(lixos[i]).animate({ "left": '92%' }, duration*((tamanho-cur)/tamanho),function(){});
+            lixos[i].animacao = $(lixos[i]).animate({ "left": '92%' }, tempo*((tamanho-cur)/tamanho),function(){});
     }
     loop_lixos_pausado = false;
 }

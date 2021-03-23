@@ -11,6 +11,7 @@
     position: absolute;
     width: 100%;
     height: 18%;
+    top: 44%;
 }
 .tronco{
     background-image: url("../assets/desmatamento/tronco.png");
@@ -25,7 +26,7 @@
     background-image: url("../assets/desmatamento/muda\ plantada.png");
 }
 .muda_agoada{
-    background-image: url("../assets/desmatamento/muda\ plantada.png");
+    background-image: url("../assets/desmatamento/muda_aguada.png");
 }
 #ferramentas_desmatamento > div{
     background-size: 100%;
