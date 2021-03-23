@@ -162,7 +162,7 @@ var falas = {
             "Você ainda não ajudou todas as áreas da floresta. Vá em todas e você receberá um crachá do Greenpeace Fortaleza!"
         ],
         "terminou_fases" : [
-            "Você ajudou todas as áreas da floresta!Aqui está seu crachá do Greenpeace Fortaleza!"
+            "Você ajudou todas as áreas da floresta! Aqui está seu crachá do Greenpeace Fortaleza!"
         ],
         "saber_mais" : [            
             "Já que você está aqui não gostaria de ver como os animais que resgatamos estão?",
@@ -287,6 +287,14 @@ function proxima_fala(){
                     break;
                     case 'fim':
                         mudarTela('floresta');
+                    break;
+                }
+            break;
+            case 'sede':
+                switch(comunicacao_parte){
+                    case 'inicio':
+                        muda_comunicacao('saber_mais');
+                        proxima_fala();
                     break;
                 }
             break;

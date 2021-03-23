@@ -27,12 +27,16 @@
 }
 #como_jogar_btn{
     left: 13%;
+    width: 7%;
 }
 #jogar_btn{
     left: 41%;
     width: 18%;
 }
-
+#inicio > div > img{
+    width: 100%;
+    height: 100%;
+}
 #voltar_btn{
     z-index: 5;
     background-image: url("../assets/voltar.png");

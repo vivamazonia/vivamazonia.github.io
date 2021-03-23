@@ -67,9 +67,9 @@
 
 .sede_info{
     position: absolute;
-    left: 5%;
-    width: 90%;
-    height: 100%;
+    left: 14%;
+    width: 80%;
+    height: 74%;
     display: none;
 }
 #sede_menu{
@@ -89,25 +89,25 @@
 .sede_info .imagens{
     display: flex;    
     position: absolute;
-    width: 42%;
-    height: 79%;
-    left: 8%;
-    top: 7%;
+    width: 49%;
+    height: 97%;
+    left: -4%;
+    top: 10%;
 }
 .sede_info .texto{
     font-size: 170%;
     top: 8%;
     position: absolute;
-    width: 42%;
-    height: 79%;
-    right: 6%;
+    width: 55%;
+    height: 100%;
+    right: 2%;
     font-family: 'Arista', sans-serif !important;
+    background-image: url("../assets/box_animais.png");
+    background-size: 100%;
     color: white;
 }
-
-.sede_info .imagens .texto{
-    padding: 3%;
-    padding-top: 0;
+.sede_info .texto > p{
+    padding: 0% 6% 0% 15%;
 }
 
 .sede_info .imagens > img{
