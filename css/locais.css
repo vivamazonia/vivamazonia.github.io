@@ -25,6 +25,10 @@
 #info_btn{
     left: 5%;
 }
+#info_btn:hover, #como_jogar_btn:hover, #jogar_btn:hover, #voltar_btn:hover{
+    -webkit-filter: drop-shadow(20px 20px 20px #222);
+    filter: drop-shadow(20px 20px 20px #222);
+}
 #como_jogar_btn{
     left: 13%;
     width: 7%;
