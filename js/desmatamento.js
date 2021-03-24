@@ -5,13 +5,18 @@ var enxada_usada = false;
 var muda_usada = false;
 var regador_usado = false;
 
-function sairDesmatamento(){
-    $("#desmatamento").hide();
-}
-function iniciarDesmatamento(){
+/* Função para iniciar o jogo */
+function comeca_fase_desmatamento(){
     $("#desmatamento").show();
 }
-function mudar(tipo){
+
+/* Função para finalizar a fase ou voltar */
+function sair_fase_desmatamento(){
+    $("#desmatamento").hide();
+}
+
+/* Função para troca da ferramenta, mudando o design da imagem do mouse */
+function mudar_ferramenta(tipo){
     ferramenta_atual = tipo;
     switch(tipo){
         case 'pa':
@@ -45,37 +50,22 @@ function mudar(tipo){
     }
     $('#main_div').css("cursor",'url("assets/desmatamento/'+tipo+'_mouse.png") 25 200, auto');
 }
+
+/* Prepara para toda planta no clique executar a função usa_ferramenta */
 $(".planta_desmatamento").click(function(){
-    console.log($(this).attr('class'));
-    usarFerramenta($(this),ferramenta_atual);
+    usa_ferramenta($(this),ferramenta_atual);
 });
 
-function deParaFerramentasUsar(ferramenta){
-    switch(ferramenta){
-        case 'pa':
-            return "tronco";
-        break;
-        case 'enxada':
-            return 'buraco';
-        break;
-        case 'muda':
-            return 'buraco_arrado';
-        break;
-        case 'regador':
-            return 'buraco_muda';
-        break;
-    }
-}
-function usarFerramenta(atual, ferramenta){
+/* Função para troca da ferramenta, com a fala da Julia com reação e mudando o status das árvore */
+function usa_ferramenta(atual, ferramenta){
     var atual_fase = $(atual).attr('class').split(' ')[1];
-    console.log(atual_fase);
     switch(ferramenta){
         case 'pa':
             if(atual_fase == 'tronco') {
                 $(atual).removeClass('tronco');
                 $(atual).addClass('buraco');
             }else{
-                mudaHumorJulia('normal');
+                altera_emocao_julia('normal');
                 muda_comunicacao('errado');
                 proxima_fala();
             }
@@ -85,7 +75,7 @@ function usarFerramenta(atual, ferramenta){
                 $(atual).removeClass('buraco');
                 $(atual).addClass('buraco_arrado');
             }else{
-                mudaHumorJulia('normal');
+                altera_emocao_julia('normal');
                 muda_comunicacao('errado');
                 proxima_fala();
             }
@@ -95,7 +85,7 @@ function usarFerramenta(atual, ferramenta){
                 $(atual).removeClass('buraco_arrado');
                 $(atual).addClass('buraco_muda');
             }else{
-                mudaHumorJulia('normal');
+                altera_emocao_julia('normal');
                 muda_comunicacao('errado');
                 proxima_fala();
             }
@@ -112,12 +102,12 @@ function usarFerramenta(atual, ferramenta){
                     }
                 } 
                 if(finalizou){
-                    mudaHumorJulia('feliz');
+                    altera_emocao_julia('feliz');
                     muda_comunicacao('fim');
                     proxima_fala();
                 }
             }else{
-                mudaHumorJulia('normal');
+                altera_emocao_julia('normal');
                 muda_comunicacao('errado');
                 proxima_fala();
             }

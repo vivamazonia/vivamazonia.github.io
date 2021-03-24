@@ -83,7 +83,7 @@ function seleciona_lixo(item){
 
 /* Funcção para definição das ações quando o lixo vai para a lixeira errada */
 function lixo_local_errado(){
-    mudaHumorJulia('triste');
+    altera_emocao_julia('triste');
     muda_comunicacao('errou');
     proxima_fala();
 }
@@ -96,7 +96,7 @@ function lixo_local_certo(){
     contador_acertos++;
     //Se a quantidade de acertos for igual ao máximo o jogo acaba
     if(contador_acertos == quantidade_lixos){
-        mudaHumorJulia('feliz');
+        altera_emocao_julia('feliz');
         muda_comunicacao('fim');
         proxima_fala();
     }

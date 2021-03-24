@@ -43,8 +43,8 @@
             <br/>
             <div id="trafico_animais">
                 <div id="lanterna">
-                    <div id="luz1"><div id="ident1"></div></div>
-                    <div id="luz2"><div id="ident2"></div></div>
+                    <div id="lanterna1"><div id="ident1"></div></div>
+                    <div id="lanterna2"><div id="ident2"></div></div>
                 </div>
                 <div id="trafico_animais_jaula">
                     <div id="trafico_animais_carregando"></div>
@@ -110,10 +110,10 @@
                     <div class="planta_desmatamento tronco"></div>
                 </div>
                 <div id="ferramentas_desmatamento">
-                    <div id="pá_desmatamento" onclick="mudar('pa')"></div>
-                    <div id="enxada_desmatamento" onclick="mudar('enxada')"></div>
-                    <div id="muda_desmatamento" onclick="mudar('muda')"></div>
-                    <div id="regador_desmatamento" onclick="mudar('regador')"></div>
+                    <div id="pá_desmatamento" onclick="mudar_ferramenta('pa')"></div>
+                    <div id="enxada_desmatamento" onclick="mudar_ferramenta('enxada')"></div>
+                    <div id="muda_desmatamento" onclick="mudar_ferramenta('muda')"></div>
+                    <div id="regador_desmatamento" onclick="mudar_ferramenta('regador')"></div>
                 </div>
             </div>
             <div id="poluicao">
@@ -229,7 +229,7 @@
         </div>
     </body>
     <script src="js/telas.js"></script>
-    <script src="js/inicial.js"></script>
+    <script src="js/comunicacao.js"></script>
     <script src="js/falas.js"></script>
     <script src="js/sede.js"></script>
     <script src="js/queimada.js"></script>

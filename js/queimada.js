@@ -1,47 +1,59 @@
-var intervalID;
+var id_aumento_fogo;
+var harpia_encontrada = false;
+var tucano_encontrado = false;
+var fogo_apagado = false;
 
-function resgate_onça(){
+/* Função para iniciar jogo queimadas */
+function comeca_fase_queimadas(){
+    $(".local-queimada").addClass('floresta-verde-queimada');
+    for(var i = 0; i < 5;i++)
+        inicia_incendio_area_aleatoria(true);
+    $("#queimadas").show();
+    $(".local-queimada").show();
+    id_aumento_fogo = window.setInterval(inicia_incendio_area_aleatoria, 2000, false);
+}
+
+/* Função altera fundo para onça */
+function prepara_fase_resgate_onça(){
     $("#main_div").addClass('queimadas_resgatar_onça');
     muda_comunicacao('onça');
     proxima_fala();
 }
-function resgate_aves(){
-    mudaHumorJulia('triste');
+
+/* Função altera fundo para aves */
+function prepara_fase_resgate_aves(){
+    altera_emocao_julia('triste');
     $("#main_div").addClass('queimadas_resgatar_aves');
     muda_comunicacao('aves');
     proxima_fala();
 }
-function resgate_anta(){
-    mudaHumorJulia('triste');
+
+/* Função altera fundo para anta */
+function prepara_fase_resgate_anta(){
+    altera_emocao_julia('triste');
     $("#main_div").addClass('queimadas_resgatar_anta');
     muda_comunicacao('anta');
     proxima_fala();
 }
 
-function vitoria_queimada(){
-    mudaHumorJulia('feliz');
+ // Função para quando toda a floresta estiver livre, vitória
+function todos_fogos_apagados(){
+    altera_emocao_julia('feliz');
     muda_comunicacao('vitoria');
     fogo_apagado = true;
-    clearInterval(intervalID);
+    clearInterval(id_aumento_fogo);
     proxima_fala();
 }
 
-function derrota_queimada(){
-    mudaHumorJulia('triste');
+// Função para quando toda a floresta estiver queimada, derrota
+function toda_floresta_queimada(){
+    altera_emocao_julia('triste');
     muda_comunicacao('derrota');
-    clearInterval(intervalID);
+    clearInterval(id_aumento_fogo);
     proxima_fala();
 }
 
-function iniciarQueimadas(){
-    $(".local-queimada").addClass('floresta-verde-queimada');
-    for(var i = 0; i < 5;i++)
-        pintarAleatorio(true);
-    $("#queimadas").show();
-    $(".local-queimada").show();
-    intervalID = window.setInterval(pintarAleatorio, 2000, false);
-}
-
+// Função para clique no local da queimada, se estiver pegando fogo, apaga    
 $(".local-queimada").click(function(){
     let vermelho = $(this).hasClass("floresta-fogo-queimada");
     if(vermelho){
@@ -50,7 +62,8 @@ $(".local-queimada").click(function(){
     }
 });
 
-function temVerde(){
+// Verifica se possui área não queimada
+function possui_area_nao_queimada(){
     for(let i = 1; i <=6; i++){
         for(let j = 1; j <= 10; j++){
             if($(".linha"+i+" .local-queimada:nth-child("+j+")").hasClass('floresta-verde-queimada') == true){
@@ -60,7 +73,9 @@ function temVerde(){
     }
     return false;
 }
-function temVermelho(){
+
+// Verifica se possui área queimadas
+function possui_area_queimada(){
     for(let i = 1; i <=6; i++){
         for(let j = 1; j <= 10; j++){
             if($(".linha"+i+" .local-queimada:nth-child("+j+")").hasClass('floresta-fogo-queimada') == true){
@@ -71,10 +86,10 @@ function temVermelho(){
     return false;
 }
 
-
-function pintarAleatorio(inicio){
-    if(!inicio && !temVermelho()){
-        vitoria_queimada();
+// Inicia um incendio numa área aleatorio
+function inicia_incendio_area_aleatoria(inicio){
+    if(!inicio && !possui_area_queimada()){
+        todos_fogos_apagados();
     }else{
         let vermelho = false;
         do{
@@ -84,10 +99,10 @@ function pintarAleatorio(inicio){
                 $(".linha"+linha+" .local-queimada:nth-child("+coluna+")").removeClass('floresta-verde-queimada');
                 $(".linha"+linha+" .local-queimada:nth-child("+coluna+")").addClass('floresta-fogo-queimada');
                 vermelho = false;
-            }else if(temVerde()){
+            }else if(possui_area_nao_queimada()){
                 vermelho = true;
             }else{
-                derrota_queimada();
+                toda_floresta_queimada();
                 vermelho = false;
             }
         }while(vermelho);
@@ -95,42 +110,46 @@ function pintarAleatorio(inicio){
     }
 }
 
+/* Função para mecânica de resgate da onça, marca flag para sede */
 $("#queimadas_resgatar_onça").click(function(){
     animal_onca = true;
-    mudaHumorJulia('feliz');
+    altera_emocao_julia('feliz');
     $("#main_div").removeClass('queimadas_resgatar_onça');
     $("#queimadas_resgatar_onça").hide();
     muda_comunicacao('encontrado_onça');
     proxima_fala();
 });
-var harpia_encontrada = false;
-var tucano_encontrado = false;
+
+/* Função para mecânica de resgate da harpia, marca flag para sede */
 $("#queimadas_resgatar_harpia").click(function(){
     harpia_encontrada = true;
     animal_harpia = true;
     $("#queimadas_resgatar_harpia").hide();
     if(tucano_encontrado && harpia_encontrada){
         $("#main_div").removeClass('queimadas_resgatar_aves');
-        mudaHumorJulia('feliz');
+        altera_emocao_julia('feliz');
         muda_comunicacao('encontrado_aves');
         proxima_fala();
     }
 });
+
+/* Função para mecânica de resgate da tucano, marca flag para sede */
 $("#queimadas_resgatar_tucano").click(function(){
     tucano_encontrado = true;
     animal_tucano = true;
     $("#queimadas_resgatar_tucano").hide();
     if(tucano_encontrado && harpia_encontrada){
-        mudaHumorJulia('feliz');
+        altera_emocao_julia('feliz');
         $("#main_div").removeClass('queimadas_resgatar_aves');
         muda_comunicacao('encontrado_aves');
         proxima_fala();
     }
 });
 
+/* Função para mecânica de resgate da anta, marca flag para sede */
 $("#queimadas_resgatar_anta").click(function(){
     animal_anta = true;
-    mudaHumorJulia('feliz');
+    altera_emocao_julia('feliz');
     $("#main_div").removeClass('queimadas_resgatar_anta');
     $("#queimadas_resgatar_anta").hide();
     muda_comunicacao('encontrado_anta');

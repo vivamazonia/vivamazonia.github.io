@@ -36,18 +36,18 @@
     bottom: 0;
 }
 
-#luz1, #luz2{
+#lanterna1, #lanterna2{
     position: absolute;
     right: 0;
     width: 77%;
     height: 36%;
     z-index: 3;
 }
-#luz1 {
+#lanterna1 {
     transform: skew(0deg, 10deg);
     top: 22%;
 }
-#luz2 {
+#lanterna2 {
     transform: skew(0deg, -10deg);
     top: 40%;
 }

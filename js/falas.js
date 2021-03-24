@@ -2,12 +2,12 @@ var falas = {
     "floresta" : {
         "inicio" : [
             "Oi amigo! Eu sou a Júlia, voluntária do Greenpeace Fortaleza.",
-            /*"Você conhece a Amazônia? Ela é a maior floresta tropical do mundo!",
+            "Você conhece a Amazônia? Ela é a maior floresta tropical do mundo!",
             "Infelizmente ela está sendo destruída aos pouquinhos...",
             "Nós não podemos deixar que isso aconteça!",
             "Que tal você me ajudar a preservar a nossa linda floresta?",
             "Vem comigo, vou te ensinar como podemos ajudar a preservar a Floresta Amazônica.",
-            "Clique em uma das áreas no mapa"*/
+            "Clique em uma das áreas no mapa"
         ],
     },
     "queimadas_apagar" : {
@@ -172,137 +172,4 @@ var falas = {
             "Esse animal ainda não foi resgatado, vamos ter que resgatá-lo de outra área antes"
         ]
     }
-}
-var index = -1;
-var max_index = 0;
-function proxima_fala(){
-    $("#comunica").show();
-    max_index = falas[tela_atual][comunicacao_parte].length;
-    index += 1;
-    $("#texto").html(falas[tela_atual][comunicacao_parte][index]);
-    if(max_index == index){
-        $("#comunica").hide();
-        switch(tela_atual){
-            case 'floresta':
-                //proxima_fala();
-            break;
-            case 'queimadas_resgatar':
-                switch(comunicacao_parte){
-                    case "inicio":
-                        resgate_onça();
-                    break;
-                    case "onça":
-                        $("#queimadas_resgatar_onça").show();
-                    break;
-                    case "encontrado_onça":
-                        resgate_aves();
-                    break;
-                    case "aves":
-                        $("#queimadas_resgatar_harpia, #queimadas_resgatar_tucano").show();
-                    break;
-                    case "encontrado_aves":
-                        resgate_anta();
-                    break;
-                    case "anta":
-                        $("#queimadas_resgatar_anta").show();
-                    break;
-                    case "encontrado_anta":
-                        animais_resgatados = true;
-                        mudaHumorJulia('normal');
-                        mudarTela('queimadas_apagar');
-                    break;
-                }
-            break;
-            case 'queimadas_apagar':
-                switch(comunicacao_parte){
-                    case "inicio":
-                        iniciarQueimadas();
-                    break;
-                    case "vitoria":
-                        mudarTela('floresta');
-                    break;
-                    case "derrota":
-                        iniciarQueimadas();
-                    break;
-                }
-            break;
-            case 'trafico_animais':
-                switch(comunicacao_parte){
-                    case "inicio":
-                        iniciarTraficoAnimais('jacaretinga');
-                    break;
-                    case "resgatado_jacaretinga":
-                        mudaHumorJulia('normal');
-                        resgate_boto();
-                    break;
-                    case "resgate_boto":
-                        posicaoAtual = {x:0, y:0};
-                        iniciarTraficoAnimais('boto');
-                    break;
-                    case "resgatado_boto":
-                        mudaHumorJulia('normal');
-                        resgate_pirarucu();
-                    break;
-                    case "resgate_pirarucu":
-                        posicaoAtual = {x:0, y:0};
-                        iniciarTraficoAnimais('pirarucu');
-                    break;
-                    case "resgatado_pirarucu":
-                        mudaHumorJulia('normal');
-                        resgate_peixe_boi();
-                    break;
-                    case "resgate_peixe_boi":
-                        posicaoAtual = {x:0, y:0};
-                        iniciarTraficoAnimais('peixe_boi');
-                    break;
-                    case "resgatado_peixe_boi":
-                        $("#main_div").attr('class','');
-                        mudarTela('floresta');
-                    break;
-                    case "encontrado":
-                        reiniciarTraficoAnimais();
-                    break;
-                }
-            break;
-            case 'desmatamento':
-                switch(comunicacao_parte){
-                    case 'inicio_triste':
-                        muda_comunicacao('inicio');
-                        mudaHumorJulia('normal');
-                        proxima_fala();
-                    break;
-                    case 'fim':
-                        mudarTela('floresta');
-                    break;
-                }
-                iniciarDesmatamento();
-            break;
-            case 'poluicao':
-                switch(comunicacao_parte){
-                    case 'inicio':
-                        comeca_fase_poluicao();
-                    break;
-                    case 'errou':
-                        retomar_loop_lixos();
-                    break;
-                    case 'fim':
-                        mudarTela('floresta');
-                    break;
-                }
-            break;
-            case 'sede':
-                switch(comunicacao_parte){
-                    case 'inicio':
-                        muda_comunicacao('saber_mais');
-                        proxima_fala();
-                    break;
-                }
-            break;
-        }
-    }
-}
-
-function muda_comunicacao(etapa){
-    index = -1;
-    comunicacao_parte = etapa;
 }

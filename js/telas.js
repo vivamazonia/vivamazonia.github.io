@@ -9,34 +9,18 @@ var tela_desmatamento = false;
 var tela_poluicao = false;
 
 
-var animal_onca = true;
-var animal_harpia = true;
-var animal_tucano = true;
-var animal_anta = true;
-var animal_boto = true;
-var animal_jacaretinga = true;
-var animal_peixe_boi = true;
-var animal_pirarucu = true;
+var animal_onca = false;
+var animal_harpia = false;
+var animal_tucano = false;
+var animal_anta = false;
+var animal_boto = false;
+var animal_jacaretinga = false;
+var animal_peixe_boi = false;
+var animal_pirarucu = false;
 
-function mudaHumorJulia(humor){
-    switch(humor){
-        case 'normal':
-            $("#comunica_personagem").css('background-image','url(assets/julia1.png)');
-            $("#comunica_personagem").css('background-size','100%');
-            break;
-        case 'triste':
-            $("#comunica_personagem").css('background-image','url(assets/julia2.png)');
-            $("#comunica_personagem").css('background-size','94%');
-        break;
-        case 'feliz':
-            $("#comunica_personagem").css('background-image','url(assets/julia3.png)');
-            $("#comunica_personagem").css('background-size','100%');
-            break;
-    }
-}
 
-function mudarTela(tela){
-    console.log(tela_atual);
+// Função para troca de tela, trocando fundo, escondendo a tela antiga e mostrando a nova tela
+function altera_tela(tela){
     $("#voltar_btn").show();
     $("#main_div").removeClass(tela_atual);
     $("#main_div").addClass(tela);
@@ -56,29 +40,29 @@ function mudarTela(tela){
 
         break;
         case 'trafico_animais':
-            mudaHumorJulia('triste');
+            altera_emocao_julia('triste');
             proxima_fala();
         break;
         case 'queimadas_resgatar':
-            mudaHumorJulia('triste');
+            altera_emocao_julia('triste');
             proxima_fala();
         break;
         case 'queimadas_apagar':
-            mudaHumorJulia('normal');
+            altera_emocao_julia('normal');
             proxima_fala();
         break;
         case 'poluicao':
-            mudaHumorJulia('triste');
+            altera_emocao_julia('triste');
             proxima_fala();
         break;
         case 'desmatamento':
-            mudaHumorJulia('triste');
+            altera_emocao_julia('triste');
             muda_comunicacao('inicio_triste');
             proxima_fala();
         break;
         case 'sede':
-            inicarSede();
-            mudaHumorJulia('feliz');
+            atualiza_animais_bloqueados();
+            altera_emocao_julia('feliz');
             muda_comunicacao('inicio');
             proxima_fala();
         break;
@@ -87,59 +71,74 @@ function mudarTela(tela){
 }
 
 
+// Quando clica no botão informações, muda para a tela de informações do jogo
 $("#info_btn").click(function(){
-    mudarTela('info');
+    altera_tela('info');
 });
+
+// Quando clica no botão como jogar, muda para a tela como jogar
 $("#como_jogar_btn").click(function(){
-    mudarTela('como_jogar');
+    altera_tela('como_jogar');
 });
+
+// Quando clica no botão jogar, muda para a tela floresta
 $("#jogar_btn").click(function(){
-    mudarTela('floresta');
+    altera_tela('floresta');
 });
 
 
+// Quando clica na floresta em chamas, altera para tela da queimada
 $("#floresta_btn").click(function(){
     if(!animais_resgatados)
-        mudarTela('queimadas_resgatar');
+        altera_tela('queimadas_resgatar');
     else if(!fogo_apagado)
-        mudarTela('queimadas_apagar');
+        altera_tela('queimadas_apagar');
 });
 
+// Quando clica no lago, altera para tela da poluição
 $("#lago_btn").click(function(){
-    mudarTela('poluicao');
+    altera_tela('poluicao');
 });
+
+// Quando clica na onça enjaulada, altera para tela de tráfico de animais
 $("#animais_btn").click(function(){
-    mudarTela('trafico_animais');
+    altera_tela('trafico_animais');
 });
+
+// Quando clica nos troncos, altera para tela do desmatamento
 $("#reflorestamento_btn").click(function(){
-    mudarTela('desmatamento');
+    altera_tela('desmatamento');
 });
+
+// Quando clica na sede, altera para tela da sede
 $("#sede_btn").click(function(){
-    mudarTela('sede');
+    altera_tela('sede');
 });
+
+// Ações para o clique do botão de voltar, dependendo da tela atual do clique ele muda a tela e sai do jogo
 $("#voltar_btn").click(function(){
     if(tela_atual == 'sede'){
-        if(info_animal){
+        if(mostrando_info_animal){
             $(".sede_info").hide();
             $("#sede_menu").show();
-            info_animal = false;
+            mostrando_info_animal = false;
         }else{
-            mudarTela('floresta');
+            altera_tela('floresta');
         }
     }else if(tela_atual == 'info' || tela_atual == 'como_jogar'){
-        mudarTela('inicio');
+        altera_tela('inicio');
     }else if(tela_atual == 'trafico_animais'){
-        sair_trafico_animais();
+        sair_fase_trafico_animais();
         $("#main_div").attr('class','');
-        mudarTela('floresta');
+        altera_tela('floresta');
     }else if(tela_atual == 'trafico_animais'){
         sair_fase_poluicao();
     }else if(tela_atual == 'floresta'){
         $("#main_div").attr('class','');
-        mudarTela('inicio');
+        altera_tela('inicio');
     }else{
         $("#main_div").attr('class','');
-        mudarTela('floresta');
+        altera_tela('floresta');
     }
     $("#comunica").hide();
 });
