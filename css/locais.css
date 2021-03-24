@@ -18,7 +18,7 @@
 #info_btn, #como_jogar_btn, #jogar_btn, #voltar_btn{
     cursor: url("../assets/tela/apontador_mão.png"), auto;
     position: absolute;
-    width: 7%;
+    width: 8%;
     height: 13%;
     bottom: 23%;
 }
@@ -30,8 +30,7 @@
     filter: drop-shadow(20px 20px 20px #222);
 }
 #como_jogar_btn{
-    left: 13%;
-    width: 7%;
+    left: 14%;
 }
 #jogar_btn{
     left: 41%;
