@@ -25,6 +25,7 @@ function altera_tela(tela){
     $("#main_div").removeClass(tela_atual);
     $("#main_div").addClass(tela);
     $("#"+tela_atual).hide();
+    $("#desmatamento").hide();
     $("#"+tela).show();    
     $("#comunica").hide();
     $('#main_div').css("cursor",'url("assets/tela/apontador_seta.png"), auto');
