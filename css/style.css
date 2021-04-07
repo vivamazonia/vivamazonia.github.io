@@ -6,7 +6,7 @@
 @font-face { font-family: Arista; src: url('fonts/z-arista-light.ttf'); }
 html{
     background: black;
-}
+} 
 *{
     z-index: 0;
     font-family: 'Typo_Round_Bold_Demo', sans-serif !important;
