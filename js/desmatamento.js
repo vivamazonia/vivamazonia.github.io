@@ -104,6 +104,8 @@ function usa_ferramenta(atual, ferramenta){
                 if(finalizou){
                     altera_emocao_julia('feliz');
                     muda_comunicacao('fim');
+                    document.getElementById('desmatamento').style.display = 'none';
+                    console.log('esconde');
                     proxima_fala();
                 }
             }else{
