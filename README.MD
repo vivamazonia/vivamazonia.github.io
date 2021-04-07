@@ -91,7 +91,7 @@
     </tr>
     <tr>
         <td>RF_F9</td>
-        <td>Jogar lixo errado></td>
+        <td>Jogar lixo errado</td>
         <td>Com o clique no lixo e depois na lixeira não correspondente do lixo (Ex: garrafa de vidro na lixeira de papel) o jogo pausa e a Júlia comunica o erro e pede para tentar novamente.</td>
         <td>Evidente</td>
     </tr>
@@ -144,3 +144,100 @@
         <td>Evidente</td>
     </tr>
 </table>
+
+<h3>
+    Implementação
+</h3>
+<table>
+    <tr>
+        <td><b>Referência</b></td>
+        <td><b>Função</b></td>
+        <td><b>Arquivos</b></td>
+    </tr>
+    <tr>
+        <td>RF_F1</td>
+        <td>Diálogo</td>
+        <td>comunicacao.js e falas.js e referência em todos</td>
+    </tr>
+    <tr>
+        <td>RF_F2</td>
+        <td>Navegação entre telas</td>
+        <td>O jogador poderá selecionar qual mini-game ele gostaria de jogar. Será apresentado um tela com 4 problemas ambientais: Queimadas, Poluição, Desmatamento e Tráfico de animais; e a sede do <td>telas.js e referência em comunicacao.js</td>
+    </tr>
+    <tr>
+        <td>RF_F3</td>
+        <td>Mecânica de encontrar os animais</td>
+        <td>queimadas.js e referência em comunicacao.js</td>
+    </tr>
+    <tr>
+        <td>RF_F4</td>
+        <td>Início jogo queimadas</td>
+        <td>queimadas.js e referência em comunicacao.js</td>
+    </tr>
+    <tr>
+        <td>RF_F5</td>
+        <td>Fogo se alastrando queimadas</td>
+        <td>queimadas.js e referência em comunicacao.js</td>
+    </tr>
+    <tr>
+        <td>RF_F6</td>
+        <td>Apagar fogo queimadas</td>
+        <td>queimadas.js e referência em comunicacao.js</td>
+    </tr>
+    <tr>
+        <td>RF_F7</td>
+        <td>Selecionar lixos</td>
+        <td>poluicao.js</td>
+    </tr>
+    <tr>
+        <td>RF_F8</td>
+        <td>Jogar lixo correto</td>
+        <td>poluicao.js</td>
+    </tr>
+    <tr>
+        <td>RF_F9</td>
+        <td>Jogar lixo errado</td>
+        <td>poluicao.js</td>
+    </tr>
+    <tr>
+        <td>RF_F10</td>
+        <td>Carregamento para soltura do animal</td>
+        <td>Colocando o ponteiro do mouse em cima da jaula do animal, o contador é incrementado <td>trafico_animais.js</td>
+    </tr>
+    <tr>
+        <td>RF_F11</td>
+        <td>Esconder da lanterna</td>
+        <td>trafico_animais.js</td>
+    </tr>
+    <tr>
+        <td>RF_F12</td>
+        <td>Trocar de ferramenta</td>
+        <td>Quando carregado o jogo, 4 “ferramentas” serão apresentados para o jogador escolher qual <td>desmatamento.js e index.html</td>
+    </tr>
+    <tr>
+        <td>RF_F13</td>
+        <td>Usar ferramenta pá</td>
+        <td>desmatamento.js</td>
+    </tr>
+    <tr>
+        <td>RF_F14</td>
+        <td>Usar ferramenta enxada</td>
+        <td>desmatamento.js</td>
+    </tr>
+    <tr>
+        <td>RF_F15</td>
+        <td>Plantar muda</td>
+        <td>desmatamento.js</td>
+    </tr>
+    <tr>
+        <td>RF_F16</td>
+        <td>Agoar muda</td>
+        <td>desmatamento.js</td>
+    </tr>
+    <tr>
+        <td>RF_F17</td>
+        <td>Catálogo</td>
+        <td>sede.js</td>
+    </tr>
+</table>
+
