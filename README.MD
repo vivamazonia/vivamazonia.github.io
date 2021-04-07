@@ -21,16 +21,6 @@
 <p>O jogo interativo foi criado para atender a necessidade de uma maneira lúdica e divertida de conscientizar as crianças sobre a floresta amazônica, apesar de muito importante para fauna e flora brasileira vem sofrendo problemas como queimadas, tráfico de animais silvestres, poluição e desmatamento.</p>
 <p>O jogo foi criado para o público alvo de crianças de 7 à 10 anos de idade.</p>
 
-<table>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
-
-
 <h3>
     Requisitos funcionais
 </h3>
@@ -162,7 +152,7 @@
     <tr>
         <td>RF_F2</td>
         <td>Navegação entre telas</td>
-        <td>O jogador poderá selecionar qual mini-game ele gostaria de jogar. Será apresentado um tela com 4 problemas ambientais: Queimadas, Poluição, Desmatamento e Tráfico de animais; e a sede do <td>telas.js e referência em comunicacao.js</td>
+        <td>telas.js e referência em comunicacao.js</td>
     </tr>
     <tr>
         <td>RF_F3</td>
@@ -202,7 +192,7 @@
     <tr>
         <td>RF_F10</td>
         <td>Carregamento para soltura do animal</td>
-        <td>Colocando o ponteiro do mouse em cima da jaula do animal, o contador é incrementado <td>trafico_animais.js</td>
+        <td>trafico_animais.js</td>
     </tr>
     <tr>
         <td>RF_F11</td>
@@ -212,7 +202,7 @@
     <tr>
         <td>RF_F12</td>
         <td>Trocar de ferramenta</td>
-        <td>Quando carregado o jogo, 4 “ferramentas” serão apresentados para o jogador escolher qual <td>desmatamento.js e index.html</td>
+        <td>desmatamento.js e index.html</td>
     </tr>
     <tr>
         <td>RF_F13</td>
