@@ -31,7 +31,16 @@
 </table>
 
 
+<h3>
+    Requisitos funcionais
+</h3>
 <table>
+    <tr><b>
+        <td>Referência</td>
+        <td>Função</td>
+        <td>Descrição</td>
+        <td>Categoria</td>
+    </b></tr>
     <tr>
         <td>RF_F1</td>
         <td>Diálogo</td>
