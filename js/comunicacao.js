@@ -118,6 +118,7 @@ function proxima_fala(){
                         proxima_fala();
                     break;
                     case 'fim':
+                        $("#desmatamento").hide();
                         altera_tela('floresta');
                     break;
                 }
