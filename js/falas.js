@@ -1,18 +1,18 @@
 var falas = {
     "floresta" : {
         "inicio" : [
-            "Oi amigo! Eu sou a Júlia, voluntária do Greenpeace Fortaleza.",
+            "Oi amigo! Eu sou a Júlia, voluntária do Greenpeace Fortaleza,",
             "Você conhece a Amazônia? Ela é a maior floresta tropical do mundo!",
-            "Infelizmente ela está sendo destruída aos pouquinhos...",
+            "Infelizmente ela está sendo destruída aos pouquinhos,",
             "Nós não podemos deixar que isso aconteça!",
             "Que tal você me ajudar a preservar a nossa linda floresta?",
-            "Vem comigo, vou te ensinar como podemos ajudar a preservar a Floresta Amazônica.",
+            "Vem comigo, vou te ensinar como podemos ajudar a preservar a Floresta Amazônica,",
             "Clique em uma das áreas no mapa"
         ],
     },
     "queimadas_apagar" : {
         "inicio" : [
-            "Clique com o mouse nas árvores queimando o mais rápido que puder para apagar o fogo.",
+            "Clique com o mouse nas árvores queimando o mais rápido que puder para apagar o fogo,",
             "Atenção o fogo está se espalhando muito rápido! Temos que ser mais rápidos!"
         ],
         "vitoria" : [
@@ -35,7 +35,7 @@ var falas = {
         ],
         "encontrado_onça" : [
             "Muito bem! Resgatamos a onça!",
-            "Ela será levada para a nossa sede para ser tratada e depois denvolvida para um ambiente seguro.",
+            "Ela será levada para a nossa sede para ser tratada e depois denvolvida para um ambiente seguro,",
             "Você pode visitá-la e saber mais sobre ela clicando na nossa sede"
         ],
         "aves" : [
@@ -44,7 +44,7 @@ var falas = {
         ],
         "encontrado_aves" : [
             "Muito bem! Resgatamos a harpia e o tucano!",
-            "Eles serão levados para a nossa sede para serem tratados e depois denvolvidos para um ambiente seguro.",
+            "Eles serão levados para a nossa sede para serem tratados e depois denvolvidos para um ambiente seguro,",
             "Você pode visitá-los e saber mais sobre clicando na nossa sede"
         ],
         "anta" : [
@@ -53,18 +53,18 @@ var falas = {
         ],
         "encontrado_anta" : [
             "Muito bem! Resgatamos a anta!",
-            "Ela será levada para a nossa sede para ser tratada e depois denvolvida para um ambiente seguro.",
-            "Você pode visitá-la e saber mais sobre clicando na nossa sede.",
+            "Ela será levada para a nossa sede para ser tratada e depois denvolvida para um ambiente seguro,",
+            "Você pode visitá-la e saber mais sobre clicando na nossa sede,",
             "Agora vamos apagar todo esse fogo!"
         ]
     },
     "poluicao" : {
         "inicio" : [
             "Nossa! Olha como o rio está poluído!",
-            "Tome essa rede. Limpe o rio clicando no lixo e depois na lixeira correta com o mouse."
+            "Tome essa rede, Limpe o rio clicando no lixo e depois na lixeira correta com o mouse,"
         ],
         "errou" : [
-            "Você errou, esse lixo não vai para essa lixeira. Tente novamente."
+            "Você errou, esse lixo não vai para essa lixeira, Tente novamente,"
         ],
         "fim" : [
             "Muito bem! Esse rio está mais bonito agora!",
@@ -73,36 +73,36 @@ var falas = {
     },
     "trafico_animais" : {
         "inicio" : [
-            "Olha que maldade fizeram com esses animaizinhos...",
+            "Olha que maldade fizeram com esses animaizinhos,",
             "Eles estão sendo caçados ilegalmente!",
             "Ajude os animais libertando-os das jaulas colocando o ponteiro do mouse em cima da jaula",
             "Mas cuidado! Não deixe que ninguém veja você, quando a lanterna aparecer tire o ponteiro o mais rápido",
-            "A lanterna mais clara ainda é seguro, mas se a mais forte aparecer você será encontrado."
+            "A lanterna mais clara ainda é seguro, mas se a mais forte aparecer você será encontrado,"
         ],
         "resgate_jacaretinga" : [
-            "Vamos começar resgatando esse jacaretinga.",
+            "Vamos começar resgatando esse jacaretinga,",
             "Ele está mais perto e será mais fácil"
         ],
         "resgatado_jacaretinga" : [
             "Regatamos o jacaretinga!"
         ],
         "resgate_boto" : [
-            "Agora é a vez do boto.",
+            "Agora é a vez do boto,",
             "Ele está um pouco mais longe e será mais complicado"
         ],
         "resgatado_boto" : [
             "Regatamos o boto!"
         ],
         "resgate_pirarucu" : [
-            "Agora é a vez do pirarucu.",
+            "Agora é a vez do pirarucu,",
             "Ele está um pouco mais longe e será mais complicado"
         ],
         "resgatado_pirarucu" : [
             "Resgatamos o pirarucu!"
         ],
         "resgate_peixe_boi" : [
-            "Agora vamos resgatar esse peixe boi.",
-            "Ele está mais longe e será mais díficil. Eles estão bem atentos!"
+            "Agora vamos resgatar esse peixe boi,",
+            "Ele está mais longe e será mais díficil, Eles estão bem atentos!"
         ],
         "resgatado_peixe_boi" : [
             "Resgatamos o peixe boi!",
@@ -114,11 +114,11 @@ var falas = {
     },
     "desmatamento" : {
         "inicio_triste" : [
-            "Essa área desmatada já foi uma linda floresta..."
+            "Essa área desmatada já foi uma linda floresta,"
         ],
         "inicio" : [
             "Vamos plantar algumas árvores!",
-            "Primeiro vamos usar a pá para remover esse tronco que não pode ser recuperado.",
+            "Primeiro vamos usar a pá para remover esse tronco que não pode ser recuperado,",
             "Depois vamos usar a enxada para arar a terra para plantar a muda",
             "Em seguida, vamos colocar a muda na terra arada",
             "Por fim, vamos regar a esperar nossa floresta renascer!",
@@ -143,7 +143,7 @@ var falas = {
         ],
         "errado" : [
             "Você não seguiu a sequência!",
-            "Primeiro vamos usar a pá para remover esse tronco que não pode ser recuperado.",
+            "Primeiro vamos usar a pá para remover esse tronco que não pode ser recuperado,",
             "Depois vamos usar a enxada para arar a terra para plantar a muda",
             "Em seguida, vamos colocar a muda na terra arada",
             "Por fim, vamos regar a esperar nossa floresta renascer!"
@@ -159,7 +159,7 @@ var falas = {
             "Assim que eles estiverem melhor vamos devolvê-los para a floresta em um local seguro"
         ],
         "nao_terminou_fases" : [
-            "Você ainda não ajudou todas as áreas da floresta. Vá em todas e você receberá um crachá do Greenpeace Fortaleza!"
+            "Você ainda não ajudou todas as áreas da floresta, Vá em todas e você receberá um crachá do Greenpeace Fortaleza!"
         ],
         "terminou_fases" : [
             "Você ajudou todas as áreas da floresta! Aqui está seu crachá do Greenpeace Fortaleza!"

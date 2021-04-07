@@ -32,8 +32,9 @@ function altera_tela(tela){
     muda_comunicacao('inicio');
     switch(tela){
         case 'floresta':
+            $("#escolha_area").show();
+            $("#voltar_btn").hide();
             if(primeira_vez_floresta){ proxima_fala(); primeira_vez_floresta = false};
-            sairJogos();
         break;
         case 'inicio':
             $("#voltar_btn").hide();

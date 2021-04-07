@@ -23,14 +23,22 @@
     bottom: 23%;
 }
 #info_btn{
-    left: 5%;
+    bottom: 5%;
+    left: 36%;
+    font-size: 19px;
+    width: 30%;
+    color: #09884D;
+    text-decoration: underline;
 }
 #info_btn:hover, #como_jogar_btn:hover, #jogar_btn:hover, #voltar_btn:hover{
     -webkit-filter: drop-shadow(20px 20px 20px #222);
     filter: drop-shadow(20px 20px 20px #222);
 }
 #como_jogar_btn{
-    left: 14%;
+    right: 2%;
+    width: 40px;
+    height: 40px;
+    bottom: 7%;
 }
 #jogar_btn{
     left: 41%;
@@ -46,7 +54,7 @@
     background-size: 100%;
     top: 2%;
     right: 2%;
-    height: 11%;
+    height: 13%;
 }
 #floresta_btn, #animais_btn, #reflorestamento_btn, #lago_btn, #sede_btn{
     position: absolute;
@@ -165,5 +173,12 @@
 }
 
 #voltar_btn, #queimadas_resgatar, #queimadas_apagar, #desmatamento, #poluicao, #trafico_animais, #floresta{
+    display: none;
+}
+
+#escolha_area{
+    position: absolute;
+    left: 24%;
+    top: -4%;
     display: none;
 }
