@@ -35,12 +35,12 @@
     Requisitos funcionais
 </h3>
 <table>
-    <tr><b>
-        <td>Referência</td>
-        <td>Função</td>
-        <td>Descrição</td>
-        <td>Categoria</td>
-    </b></tr>
+    <tr>
+        <td><b>Referência</b></td>
+        <td><b>Função</b></td>
+        <td><b>Descrição</b></td>
+        <td><b>Categoria</b></td>
+    </tr>
     <tr>
         <td>RF_F1</td>
         <td>Diálogo</td>
@@ -91,7 +91,7 @@
     </tr>
     <tr>
         <td>RF_F9</td>
-        <tdJogar lixo errado></td>
+        <td>Jogar lixo errado></td>
         <td>Com o clique no lixo e depois na lixeira não correspondente do lixo (Ex: garrafa de vidro na lixeira de papel) o jogo pausa e a Júlia comunica o erro e pede para tentar novamente.</td>
         <td>Evidente</td>
     </tr>
