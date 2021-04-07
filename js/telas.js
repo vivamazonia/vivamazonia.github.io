@@ -35,6 +35,8 @@ function altera_tela(tela){
             $("#escolha_area").show();
             $("#desmatamento").hide();
             $("#voltar_btn").hide();
+            document.getElementById('desmatamento').style.display = 'none';
+            console.log('escondeu12');
             if(primeira_vez_floresta){ proxima_fala(); primeira_vez_floresta = false};
         break;
         case 'inicio':
